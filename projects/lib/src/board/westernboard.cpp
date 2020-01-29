@@ -305,10 +305,11 @@ QH_BRANCH:
             STANDARD_MOVE_HELPER2(chessType + 7, strnumEn, (tx + 1));
         }
     }
-    else {
+    else
+    {
         if (side == Side::Red)
         {
-           STANDARD_MOVE_HELPER3(chessType, strnumCn, 10 - (fx + 1));
+            STANDARD_MOVE_HELPER3(chessType, strnumCn, 10 - (fx + 1));
         }
         else
         {
