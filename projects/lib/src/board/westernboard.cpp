@@ -500,7 +500,8 @@ void WesternBoard::generateMovesForPiece(QVarLengthArray<Move>& moves,
                     moves.append(Move(sourceSquare, targetSquare));
             }
         }
-        else {
+        else
+        {
             Side opSide = sideToMove().opposite();
             for (int i = 0; i < m_BPawnOffsets.size(); i++)
             {
