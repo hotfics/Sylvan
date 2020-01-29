@@ -576,7 +576,6 @@ void WesternBoard::generateMovesForPiece(QVarLengthArray<Move>& moves,
     case Cannon:
     {
         Side side = sideToMove();
-
         for (int i = 0; i < m_RookOffsets.size(); i++)
         {
             int offset = m_RookOffsets[i];
@@ -791,14 +790,12 @@ Result WesternBoard::result()
         return Result(Result::Draw, Side::NoSide, str);
     }
 
-    // 50 move rule
     if (m_reversibleMoveCount >= 120)
     {
         str = tr("60 step did not eat, judged draw!");
         return Result(Result::Draw, Side::NoSide, str);
     }
 
-    // 3-fold repetition
     if (repeatCount() >= 2)
     {
         str = tr("Cycle 3 steps, judged draw!");
