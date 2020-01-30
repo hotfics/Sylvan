@@ -408,7 +408,7 @@ void MainWindow::createToolBars()
 
     this->m_toolBar = new QToolBar(this);
     this->m_toolBar->setObjectName(QStringLiteral("m_toolBar"));
-    this->m_toolBar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon); //  ToolButtonTextUnderIcon); ToolButtonIconOnly
+    this->m_toolBar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
     /*this->m_toolBar->setMovable(false);
     this->m_toolBar->setAllowedAreas(Qt::TopToolBarArea);*/
@@ -417,8 +417,8 @@ void MainWindow::createToolBars()
 
     /*this->m_toolBar->addAction(this->m_linkChessBoardAct);
     this->m_toolBar->addAction(this->m_engineThinkAct);
-    this->m_toolBar->addAction(this->m_engineStopAct);*/
-    this->m_toolBar->addAction(this->m_engineAnalyzeAct);
+    this->m_toolBar->addAction(this->m_engineStopAct);
+    this->m_toolBar->addAction(this->m_engineAnalyzeAct);*/
     this->m_toolBar->addAction(this->m_engineSettingAct);
     this->m_toolBar->addAction(this->m_aboutAct);
 
