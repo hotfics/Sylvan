@@ -414,7 +414,7 @@ protected:
 
     virtual bool inCheck(Side side) const = 0;
 
-    virtual bool vIsBan(const Move& move);
+    virtual bool vIsBan();
 
     /*!
          * Returns the type of piece captured by \a move.

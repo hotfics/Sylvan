@@ -18,12 +18,11 @@
 */
 
 #include "enginefactory.h"
-#include "xboardengine.h"
 #include "uciengine.h"
+#include "ucciengine.h"
 
-
-//REGISTER_ENGINE_CLASS(XboardEngine, "xboard")
 REGISTER_ENGINE_CLASS(UciEngine, "uci")
+REGISTER_ENGINE_CLASS(UcciEngine, "ucci")
 
 ClassRegistry<ChessEngine>* EngineFactory::registry()
 {

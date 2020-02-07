@@ -194,28 +194,28 @@ void WesternBoard::vInitialize()
     m_GuardOffsets[3] = m_arwidth + 1;
 
     strnumCn.resize(10);
-    strnumCn[0] = tr("0");
-    strnumCn[1] = tr("1");
-    strnumCn[2] = tr("2");
-    strnumCn[3] = tr("3");
-    strnumCn[4] = tr("4");
-    strnumCn[5] = tr("5");
-    strnumCn[6] = tr("6");
-    strnumCn[7] = tr("7");
-    strnumCn[8] = tr("8");
-    strnumCn[9] = tr("9");
+    strnumCn[0] = "〇";
+    strnumCn[1] = "一";
+    strnumCn[2] = "二";
+    strnumCn[3] = "三";
+    strnumCn[4] = "四";
+    strnumCn[5] = "五";
+    strnumCn[6] = "六";
+    strnumCn[7] = "七";
+    strnumCn[8] = "八";
+    strnumCn[9] = "九";
 
     strnumEn.resize(10);
-    strnumEn[0] = tr("0");
-    strnumEn[1] = tr("1");
-    strnumEn[2] = tr("2");
-    strnumEn[3] = tr("3");
-    strnumEn[4] = tr("4");
-    strnumEn[5] = tr("5");
-    strnumEn[6] = tr("6");
-    strnumEn[7] = tr("7");
-    strnumEn[8] = tr("8");
-    strnumEn[9] = tr("9");
+    strnumEn[0] = "０";
+    strnumEn[1] = "１";
+    strnumEn[2] = "２";
+    strnumEn[3] = "３";
+    strnumEn[4] = "４";
+    strnumEn[5] = "５";
+    strnumEn[6] = "６";
+    strnumEn[7] = "７";
+    strnumEn[8] = "８";
+    strnumEn[9] = "９";
 
     strnumName.resize(16);
     strnumName[0] = tr(" ");
@@ -288,10 +288,12 @@ QString WesternBoard::standardMoveString(const Move& move)
     if (chessType != Elephant || chessType != Guard || chessType != King)
     {
         int targetSquare = source;
+#if 0
         STANDARD_MOVE_HELPER(-=, tr("B"), tr("F"));
         targetSquare = source;
         STANDARD_MOVE_HELPER(+=, tr("F"), tr("B"));
-#if 0
+#endif
+#if 1
         while(true){
             targetSquare -= 11;
             if (!isValidSquare(chessSquare(targetSquare)))
@@ -336,8 +338,10 @@ QH_BRANCH:
     if (isQH == true) {
         str = stQH;
         if (side == Side::Red) {
-            STANDARD_MOVE_HELPER2(chessType, strnumCn, 10 - (tx + 1));
 #if 0
+            STANDARD_MOVE_HELPER2(chessType, strnumCn, 10 - (tx + 1));
+#endif
+#if 1
             str += strnumName[chessType];
             if (ty == fy) {
                 str += tr("=");
@@ -360,8 +364,10 @@ QH_BRANCH:
 #endif
         }
         else {
-            STANDARD_MOVE_HELPER2(chessType + 7, strnumEn, (tx + 1));
 #if 0
+            STANDARD_MOVE_HELPER2(chessType + 7, strnumEn, (tx + 1));
+#endif
+#if 1
             str += strnumName[chessType + 7];
             if (ty == fy) {
                 str += tr("=");
@@ -386,8 +392,10 @@ QH_BRANCH:
     }
     else {
         if (side == Side::Red) {
-           STANDARD_MOVE_HELPER3(chessType, strnumCn, 10 - (fx + 1));
 #if 0
+           STANDARD_MOVE_HELPER3(chessType, strnumCn, 10 - (fx + 1));
+#endif
+#if 1
             if (ty == fy) {
                 str = strnumName[chessType];
                 str += strnumCn[10 - (fx + 1)];
@@ -413,8 +421,10 @@ QH_BRANCH:
 #endif
         }
         else {
-            STANDARD_MOVE_HELPER3(chessType + 7, strnumEn, (fx + 1));
 #if 0
+            STANDARD_MOVE_HELPER3(chessType + 7, strnumEn, (fx + 1));
+#endif
+#if 1
             if (ty == fy) {
                 str = strnumName[chessType + 7];
                 str += strnumEn[(fx + 1)];
@@ -807,14 +817,20 @@ bool WesternBoard::inCheck(Side side) const
                     {
                         if (piece.type() == Rook || piece.type() == King)
                             return true;
-                        else if (piece.type() == Pawn) {
+                        else if (piece.type() == Pawn)
+                        {
                             if (abs(targetSquare - ksquare) == 1)
                                 return true;
                             if (side == Side::Red)
+                            {
                                 if (targetSquare == ksquare - 11)
                                     return true;
-                                else if (targetSquare == ksquare + 11)
+                            }
+                            else
+                            {
+                                if (targetSquare == ksquare + 11)
                                     return true;
+                            }
                         }
                     }
                 }
@@ -917,14 +933,12 @@ Result WesternBoard::result()
         return Result(Result::Draw, Side::NoSide, str);
     }
 
-    // 50 move rule
     if (m_reversibleMoveCount >= 120)
     {
         str = tr("60 step did not eat, judged draw!");
         return Result(Result::Draw, Side::NoSide, str);
     }
 
-    // 3-fold repetition
     if (repeatCount() >= 2)
     {
         str = tr("Cycle 3 steps, judged draw!");

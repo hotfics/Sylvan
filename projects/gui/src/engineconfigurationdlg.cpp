@@ -60,7 +60,9 @@ EngineConfigurationDialog::EngineConfigurationDialog(
     ui->m_progressBar->setRange(0, 0);
     ui->m_progressBar->hide();
 
-    ui->m_protocolCombo->addItems(EngineFactory::protocols());
+    QStringList protocols = EngineFactory::protocols();
+    for (QStringList::iterator iter = protocols.begin(); iter != protocols.end(); iter++)
+        ui->m_protocolCombo->insertItem(0, *iter);
 
     ui->m_optionsView->setModel(m_engineOptionModel);
     connect(m_engineOptionModel, SIGNAL(modelReset()),
@@ -91,7 +93,9 @@ EngineConfigurationDialog::EngineConfigurationDialog(
             [=](const QString& text)
     {
         if (text == "xboard")
+        {
             ui->m_redPovCheck->setEnabled(true);
+        }
         else
         {
             ui->m_redPovCheck->setChecked(false);

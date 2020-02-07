@@ -4,7 +4,7 @@
 <context>
     <name>Board</name>
     <message>
-        <location filename="../projects/lib/src/board/board.cpp" line="29"/>
+        <location filename="../projects/lib/src/board/board.cpp" line="30"/>
         <source>Zobrist key</source>
         <translation>Zobrist 键值</translation>
     </message>
@@ -12,12 +12,12 @@
 <context>
     <name>BookExportTask</name>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="145"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="146"/>
         <source>Export Opening Book</source>
         <translation>导出开局库</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="146"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="147"/>
         <source>Parsing %1 PGN games</source>
         <translation>解析 %1 PGN 游戏</translation>
     </message>
@@ -25,12 +25,12 @@
 <context>
     <name>ChessEngine</name>
     <message>
-        <location filename="../projects/lib/src/chessengine.cpp" line="410"/>
+        <location filename="../projects/lib/src/chessengine.cpp" line="411"/>
         <source>No response to ping</source>
         <translation>对ping没有响应</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/chessengine.cpp" line="492"/>
+        <location filename="../projects/lib/src/chessengine.cpp" line="493"/>
         <source>Chess protocol was not started in time</source>
         <translation>象棋协议没有及时启动</translation>
     </message>
@@ -46,22 +46,22 @@
 <context>
     <name>EngineBuilder</name>
     <message>
-        <location filename="../projects/lib/src/enginebuilder.cpp" line="47"/>
+        <location filename="../projects/lib/src/enginebuilder.cpp" line="48"/>
         <source>Empty engine command</source>
         <translation>空引擎命令</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/enginebuilder.cpp" line="53"/>
+        <location filename="../projects/lib/src/enginebuilder.cpp" line="54"/>
         <source>Unknown chess protocol: %1</source>
         <translation>未知的象棋协议： %1</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/enginebuilder.cpp" line="82"/>
+        <location filename="../projects/lib/src/enginebuilder.cpp" line="83"/>
         <source>Cannot execute command: %1</source>
         <translation>无法执行命令： %1</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/enginebuilder.cpp" line="105"/>
+        <location filename="../projects/lib/src/enginebuilder.cpp" line="106"/>
         <source>Cannot start engine %1:%2%3</source>
         <translation>无法启动引擎 %1：%2%3</translation>
     </message>
@@ -164,48 +164,48 @@
         <translation>重新检测引擎选项和支持。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="55"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="56"/>
         <source>Add Engine</source>
         <translation>添加引擎</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="57"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="58"/>
         <source>Configure Engine</source>
         <translation>配置引擎</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="172"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="173"/>
         <source>Executables (*.exe *.bat *.cmd);;All Files (*.*)</source>
         <translation>可执行文件 (*.exe *.bat *.cmd);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="174"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="175"/>
         <source>All Files (*)</source>
         <translation>所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="198"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="199"/>
         <source>Select Engine Executable</source>
         <translation>选择引擎可执行文件</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="252"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="253"/>
         <source>Select Engine Working Directory</source>
         <translation>选择引擎工作路径</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="308"/>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="344"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="309"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="345"/>
         <source>Engine Error</source>
         <translation>引擎出错</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="383"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="384"/>
         <source>Duplicate Engine Name</source>
         <translation>重复的引擎名称</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="384"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="385"/>
         <source>An engine with this name already exists</source>
         <translation>具有此名称的引擎已经存在</translation>
     </message>
@@ -213,27 +213,27 @@
 <context>
     <name>EngineConfigurationModel</name>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="128"/>
+        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="129"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="130"/>
+        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="131"/>
         <source>Command</source>
         <translation>命令</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="132"/>
+        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="133"/>
         <source>Working Directory</source>
         <translation>工作路径</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="134"/>
+        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="135"/>
         <source>Protocol</source>
         <translation>协议</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="136"/>
+        <location filename="../projects/gui/src/engineconfigurationmodel.cpp" line="137"/>
         <source>Variants</source>
         <translation>变体</translation>
     </message>
@@ -296,12 +296,12 @@
         <translation>配置</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/enginemanagementwidget.cpp" line="115"/>
+        <location filename="../projects/gui/src/enginemanagementwidget.cpp" line="116"/>
         <source>Showing %1 of %2 engines</source>
         <translation>显示%2个引擎中的第%1个</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/enginemanagementwidget.cpp" line="191"/>
+        <location filename="../projects/gui/src/enginemanagementwidget.cpp" line="192"/>
         <source>Choose Directory</source>
         <translation>选择路径</translation>
     </message>
@@ -309,17 +309,17 @@
 <context>
     <name>EngineOptionModel</name>
     <message>
-        <location filename="../projects/gui/src/engineoptionmodel.cpp" line="137"/>
+        <location filename="../projects/gui/src/engineoptionmodel.cpp" line="138"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineoptionmodel.cpp" line="139"/>
+        <location filename="../projects/gui/src/engineoptionmodel.cpp" line="140"/>
         <source>Value</source>
         <translation>数据</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineoptionmodel.cpp" line="141"/>
+        <location filename="../projects/gui/src/engineoptionmodel.cpp" line="142"/>
         <source>Alias</source>
         <translation>别名</translation>
     </message>
@@ -345,12 +345,12 @@
 <context>
     <name>EvalHistory</name>
     <message>
-        <location filename="../projects/gui/src/evalhistory.cpp" line="37"/>
+        <location filename="../projects/gui/src/evalhistory.cpp" line="38"/>
         <source>Step</source>
         <translation>步</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalhistory.cpp" line="46"/>
+        <location filename="../projects/gui/src/evalhistory.cpp" line="47"/>
         <source>Score</source>
         <translation>分数</translation>
     </message>
@@ -358,47 +358,47 @@
 <context>
     <name>EvalWidget</name>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="45"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="46"/>
         <source>Speed</source>
         <translation>速度</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="45"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="46"/>
         <source>Hash</source>
         <translation>哈希</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="46"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
         <source>Ponder</source>
         <translation>后台</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="46"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
         <source>Probability</source>
         <translation>概率</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="46"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
         <source>EGB</source>
         <translation>残局</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="64"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="65"/>
         <source>Depth</source>
         <translation>深度</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="64"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="65"/>
         <source>Time</source>
         <translation>时间</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="65"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="66"/>
         <source>Score</source>
         <translation>分数</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="65"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="66"/>
         <source>PV</source>
         <translation>思考变例</translation>
     </message>
@@ -447,13 +447,13 @@
     </message>
     <message>
         <location filename="../projects/gui/ui/gamedatabasedlg.ui" line="98"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="304"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="305"/>
         <source>Copy PGN</source>
         <translation>复制 PGN</translation>
     </message>
     <message>
         <location filename="../projects/gui/ui/gamedatabasedlg.ui" line="114"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="310"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="311"/>
         <source>Copy FEN</source>
         <translation>复制 FEN</translation>
     </message>
@@ -488,107 +488,107 @@
         <translation>变体：</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="283"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="284"/>
         <source>Import Game</source>
         <translation>导入游戏</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="284"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="285"/>
         <source>Portable Game Notation (*.pgn);;All Files (*.*)</source>
         <translation>便携式游戏记号 (*.pgn);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="291"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="292"/>
         <source>Export Game Collection</source>
         <translation>导出游戏集</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="292"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="293"/>
         <source>Portable Game Notation (*.pgn)</source>
         <translation>便携式游戏记号 (*.pgn)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="394"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="395"/>
         <source>Remove</source>
         <translation>移除</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="398"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="399"/>
         <source>PGN database does not exist.</source>
         <translation>PGN数据库不存在。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="399"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="400"/>
         <source>Remove %1 from the list of databases?</source>
         <translation>从数据库列表中移除 %1？</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="412"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="413"/>
         <source>Import</source>
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="418"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="419"/>
         <source>PGN database has been modified since the last import.</source>
         <translation>自上次导入以来，PGN数据库已被修改。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="419"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="420"/>
         <source>The database must be imported again to read it.</source>
         <translation>必须再次导入数据库才能读取它。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="423"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="424"/>
         <source>Error occured while trying to read the PGN database.</source>
         <translation>尝试读取PGN数据库时出错。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="424"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="425"/>
         <source>Importing the database again may fix this problem.</source>
         <translation>再次导入数据库可能会解决此问题。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="468"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="469"/>
         <source>[Advanced search]</source>
         <translation>[高级搜索]</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="497"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="527"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="498"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="528"/>
         <source>File Error</source>
         <translation>文件错误</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="498"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="528"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="499"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="529"/>
         <source>Error while saving file %1
 %2</source>
         <translation>保存文件时出错 %1
 %2</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="512"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="513"/>
         <source>Opening depth</source>
         <translation>开局深度</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="513"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="514"/>
         <source>Maximum opening depth (plies):</source>
         <translation>最大开局深度 （步数）:</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="518"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="519"/>
         <source>Create Opening Book</source>
         <translation>创建开局库</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="519"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="520"/>
         <source>Polyglot Book File (*.bin)</source>
         <translation>通晓库文件 (*.bin)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="550"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="564"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="551"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="565"/>
         <source>Copied</source>
         <translation>已复制</translation>
     </message>
@@ -1015,22 +1015,22 @@
         <translation>残局决定</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="53"/>
+        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="54"/>
         <source>Select opening suite</source>
         <translation>选择开局套件</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="54"/>
+        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="55"/>
         <source>PGN/EPD files (*.pgn *.epd)</source>
         <translation>PGN/EPD 文件 (*.pgn *.epd)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="63"/>
+        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="64"/>
         <source>Select the opening book file</source>
         <translation>选择开局库文件</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="64"/>
+        <location filename="../projects/gui/src/gamesettingswidget.cpp" line="65"/>
         <source>BHGui OBK files (*.obk)</source>
         <translation>兵河五四界面 OBK 文件 (*.obk)</translation>
     </message>
@@ -1038,32 +1038,32 @@
 <context>
     <name>GameViewer</name>
     <message>
-        <location filename="../projects/gui/src/gameviewer.cpp" line="55"/>
+        <location filename="../projects/gui/src/gameviewer.cpp" line="56"/>
         <source>Skip to the beginning</source>
         <translation>跳到开头</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gameviewer.cpp" line="63"/>
+        <location filename="../projects/gui/src/gameviewer.cpp" line="64"/>
         <source>Previous move</source>
         <translation>上一步</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gameviewer.cpp" line="71"/>
+        <location filename="../projects/gui/src/gameviewer.cpp" line="72"/>
         <source>Next move</source>
         <translation>下一步</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gameviewer.cpp" line="79"/>
+        <location filename="../projects/gui/src/gameviewer.cpp" line="80"/>
         <source>Skip to the end</source>
         <translation>跳到结尾</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gameviewer.cpp" line="204"/>
+        <location filename="../projects/gui/src/gameviewer.cpp" line="205"/>
         <source>Cannot Show Game</source>
         <translation>无法显示游戏</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gameviewer.cpp" line="205"/>
+        <location filename="../projects/gui/src/gameviewer.cpp" line="206"/>
         <source>This game is incompatible with Sylvan and cannot be shown.</source>
         <translation>此游戏与Sylvan不兼容，无法显示。</translation>
     </message>
@@ -1076,57 +1076,57 @@
         <translation>正在导入</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="39"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="40"/>
         <source>Importing &quot;%1&quot;</source>
         <translation>正在导入 &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="77"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="78"/>
         <source>%1 games/sec - %2</source>
         <translation>%1 游戏/秒 - %2</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="90"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="91"/>
         <source>Import failed</source>
         <translation>导入失败</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="95"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="96"/>
         <source>Import failed: file does not exist</source>
         <translation>导入失败： 文件不存在</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="99"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="100"/>
         <source>Import failed: I/O error</source>
         <translation>导入失败： I/O出错</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="103"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="104"/>
         <source>Import failed: unknown error</source>
         <translation>导入失败： 未知错误</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="116"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="117"/>
         <source>About 5 seconds</source>
         <translation>大约 5 秒</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="119"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="120"/>
         <source>About 10 seconds</source>
         <translation>大约 10 秒</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="122"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="123"/>
         <source>Less than a minute</source>
         <translation>不到 1 分钟</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="125"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="126"/>
         <source>About a minute</source>
         <translation>大约 1 分钟</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/importprogressdlg.cpp" line="127"/>
+        <location filename="../projects/gui/src/importprogressdlg.cpp" line="128"/>
         <source>About %1 minutes</source>
         <translation>大约 %1 分钟</translation>
     </message>
@@ -1729,7 +1729,7 @@ Do you want to save?</source>
 <context>
     <name>PgnDatabaseModel</name>
     <message>
-        <location filename="../projects/gui/src/pgndatabasemodel.cpp" line="118"/>
+        <location filename="../projects/gui/src/pgndatabasemodel.cpp" line="119"/>
         <source>Database</source>
         <translation>数据库</translation>
     </message>
@@ -1737,12 +1737,12 @@ Do you want to save?</source>
 <context>
     <name>PgnExportTask</name>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="206"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="207"/>
         <source>Export Games</source>
         <translation>导出游戏</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="207"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="208"/>
         <source>Writing %1 games to file</source>
         <translation>写入%1游戏到文件</translation>
     </message>
@@ -1750,37 +1750,37 @@ Do you want to save?</source>
 <context>
     <name>PgnGameEntryModel</name>
     <message>
-        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="168"/>
+        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="169"/>
         <source>Event</source>
         <translation>事件</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="170"/>
+        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="171"/>
         <source>Site</source>
         <translation>站点</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="172"/>
+        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="173"/>
         <source>Date</source>
         <translation>日期</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="174"/>
+        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="175"/>
         <source>Round</source>
         <translation>回合</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="176"/>
+        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="177"/>
         <source>Red</source>
         <translation>红方</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="178"/>
+        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="179"/>
         <source>Black</source>
         <translation>黑方</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="180"/>
+        <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="181"/>
         <source>Result</source>
         <translation>结果</translation>
     </message>
@@ -1788,12 +1788,12 @@ Do you want to save?</source>
 <context>
     <name>PgnTagsModel</name>
     <message>
-        <location filename="../projects/gui/src/pgntagsmodel.cpp" line="94"/>
+        <location filename="../projects/gui/src/pgntagsmodel.cpp" line="95"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/pgntagsmodel.cpp" line="96"/>
+        <location filename="../projects/gui/src/pgntagsmodel.cpp" line="97"/>
         <source>Value</source>
         <translation>数据</translation>
     </message>
@@ -1801,47 +1801,47 @@ Do you want to save?</source>
 <context>
     <name>PlainTextLog</name>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="46"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="47"/>
         <source>Clear Log</source>
         <translation>清除日志</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="49"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="50"/>
         <source>Save Log to File...</source>
         <translation>保存日志到文件…</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="52"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="53"/>
         <source>Save Log</source>
         <translation>保存日志</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="53"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="54"/>
         <source>Text Files (*.txt);;All Files (*.*)</source>
         <translation>文本文件 (*.txt);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="82"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="83"/>
         <source>The file &quot;%1&quot; could not be saved because of insufficient privileges.</source>
         <translation>由于权限不足，无法保存文件&quot;%1&quot;。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="87"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="88"/>
         <source>Try selecting a location where you have the permissions to create files.</source>
         <translation>尝试选择一个您有创建文件权限的位置。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="93"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="94"/>
         <source>The file &quot;%1&quot; could not be saved because the operation timed out.</source>
         <translation>由于操作超时，无法保存文件&quot;%1&quot;。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="98"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="99"/>
         <source>Try saving the file to a local or another network disk.</source>
         <translation>尝试将文件保存到本地或另一个网络磁盘。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/plaintextlog.cpp" line="103"/>
+        <location filename="../projects/gui/src/plaintextlog.cpp" line="104"/>
         <source>The file &quot;%1&quot; could not be saved.</source>
         <translation>无法保存文件&quot;%1&quot;。</translation>
     </message>
@@ -1849,77 +1849,77 @@ Do you want to save?</source>
 <context>
     <name>Result</name>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="104"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="105"/>
         <source>%1 Red side admit defeat</source>
         <translation>%1 红方认输</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="108"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="109"/>
         <source>Timeout draw</source>
         <translation>超时和棋</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="110"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="111"/>
         <source>%1 Timeout defeat</source>
         <translation>%1 超时判输</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="115"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="116"/>
         <source>Manual draw</source>
         <translation>手动和棋</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="117"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="118"/>
         <source>%1 Manual win</source>
         <translation>%1 手动胜利</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="120"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="121"/>
         <source>%1 Output illegal moves</source>
         <translation>%1 输出非法棋步</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="124"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="125"/>
         <source>Disconnect draw</source>
         <translation>断线和棋</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="126"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="127"/>
         <source>%1 Disconnect</source>
         <translation>%1 断线</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="131"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="132"/>
         <source>Stalled connection draw</source>
         <translation>停滞连接和棋</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="133"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="134"/>
         <source>%1&apos;s Disconnect</source>
         <translation>%1&apos;s 断线</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="138"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="139"/>
         <source>Rules draw</source>
         <translation>规则和棋</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="140"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="141"/>
         <source>%1 Rules win</source>
         <translation>%1 规则胜利</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="143"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="144"/>
         <source>No result</source>
         <translation>没有结果</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="145"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="146"/>
         <source>Result error</source>
         <translation>结果出错</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="150"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="151"/>
         <source>%1 Win</source>
         <translation>%1胜利</translation>
     </message>
@@ -1936,27 +1936,27 @@ Do you want to save?</source>
         <translation type="obsolete">循环3次，判和！</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="152"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="153"/>
         <source>Draw</source>
         <translation>和棋</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="169"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="170"/>
         <source>*</source>
         <translation>未知</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="171"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="172"/>
         <source>1-0</source>
         <translation>红胜</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="173"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="174"/>
         <source>0-1</source>
         <translation>黑胜</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/result.cpp" line="174"/>
+        <location filename="../projects/lib/src/board/result.cpp" line="175"/>
         <source>1/2-1/2</source>
         <translation>和棋</translation>
     </message>
@@ -2068,29 +2068,29 @@ Do you want to save?</source>
         <translation>competition.epd</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/settingsdlg.cpp" line="137"/>
+        <location filename="../projects/gui/src/settingsdlg.cpp" line="138"/>
         <source>Choose Directory</source>
         <translation>选择路径</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/settingsdlg.cpp" line="155"/>
-        <location filename="../projects/gui/src/settingsdlg.cpp" line="170"/>
+        <location filename="../projects/gui/src/settingsdlg.cpp" line="156"/>
+        <location filename="../projects/gui/src/settingsdlg.cpp" line="171"/>
         <source>Select PGN output file</source>
         <translation>选择PGN输出文件</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/settingsdlg.cpp" line="157"/>
-        <location filename="../projects/gui/src/settingsdlg.cpp" line="172"/>
+        <location filename="../projects/gui/src/settingsdlg.cpp" line="158"/>
+        <location filename="../projects/gui/src/settingsdlg.cpp" line="173"/>
         <source>Portable Game Notation (*.pgn)</source>
         <translation>便携式游戏记号 (*.pgn)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/settingsdlg.cpp" line="185"/>
+        <location filename="../projects/gui/src/settingsdlg.cpp" line="186"/>
         <source>Select EPD output file</source>
         <translation>选择EPD输出文件</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/settingsdlg.cpp" line="187"/>
+        <location filename="../projects/gui/src/settingsdlg.cpp" line="188"/>
         <source>Extended Position Description (*.epd)</source>
         <translation>扩展局面描述 (*.epd)</translation>
     </message>
@@ -2098,12 +2098,12 @@ Do you want to save?</source>
 <context>
     <name>Side</name>
     <message>
-        <location filename="../projects/lib/src/board/side.cpp" line="46"/>
+        <location filename="../projects/lib/src/board/side.cpp" line="47"/>
         <source>Red</source>
         <translation>红方</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/side.cpp" line="48"/>
+        <location filename="../projects/lib/src/board/side.cpp" line="49"/>
         <source>Black</source>
         <translation>黑方</translation>
     </message>
@@ -2111,7 +2111,7 @@ Do you want to save?</source>
 <context>
     <name>SylvanApplication</name>
     <message>
-        <location filename="../projects/gui/src/sylvanapp.cpp" line="265"/>
+        <location filename="../projects/gui/src/sylvanapp.cpp" line="266"/>
         <source>Currnet Match</source>
         <translation>当前对局</translation>
     </message>
@@ -2157,62 +2157,62 @@ Do you want to save?</source>
 <context>
     <name>TimeControl</name>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="29"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="30"/>
         <source>%1 sec</source>
         <translation>%1 秒钟</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="31"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="32"/>
         <source>%1 min</source>
         <translation>%1 分钟</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="32"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="33"/>
         <source>%1 h</source>
         <translation>%1 小时</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="40"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="41"/>
         <source>%1 k</source>
         <translation>%1 千</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="41"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="42"/>
         <source>%1 M</source>
         <translation>%1 百万</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="174"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="175"/>
         <source>infinite time</source>
         <translation>无限时间</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="176"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="177"/>
         <source>%1 per move</source>
         <translation>%1 每步</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="179"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="180"/>
         <source>%1 moves in %2</source>
         <translation>%1 棋步在 %2</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="186"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="187"/>
         <source>, %1 increment</source>
         <translation>, %1 增加</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="189"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="190"/>
         <source>, %1 nodes</source>
         <translation>, %1 节点数</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="192"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="193"/>
         <source>, %1 plies</source>
         <translation>, %1 步数</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/timecontrol.cpp" line="194"/>
+        <location filename="../projects/lib/src/timecontrol.cpp" line="195"/>
         <source>, %1 ms margin</source>
         <translation>, %1 毫秒 余裕</translation>
     </message>
@@ -2417,19 +2417,19 @@ Do you want to save?</source>
 <context>
     <name>TournamentResultsDialog</name>
     <message>
-        <location filename="../projects/gui/src/tournamentresultsdlg.cpp" line="32"/>
+        <location filename="../projects/gui/src/tournamentresultsdlg.cpp" line="33"/>
         <source>Tournament Results</source>
         <translation>联赛结果</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/tournamentresultsdlg.cpp" line="76"/>
+        <location filename="../projects/gui/src/tournamentresultsdlg.cpp" line="77"/>
         <source>Score of %1 vs %2: %3 - %4 - %5 [%6]
 </source>
         <translation>分数 %1 vs %2: %3 - %4 - %5 [%6]
 </translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/tournamentresultsdlg.cpp" line="86"/>
+        <location filename="../projects/gui/src/tournamentresultsdlg.cpp" line="87"/>
         <source>
 
 %1 of %2 games finished.</source>
@@ -2549,233 +2549,167 @@ Do you want to save?</source>
 <context>
     <name>WesternBoard</name>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="100"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="101"/>
         <source>pawn</source>
         <translation>兵（卒）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="101"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="102"/>
         <source>horse</source>
         <translation>马</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="102"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="103"/>
         <source>elephant</source>
         <translation>相（象）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="103"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="104"/>
         <source>guard</source>
         <translation>仕（士）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="104"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="105"/>
         <source>rook</source>
         <translation>车</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="105"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="106"/>
         <source>cannon</source>
         <translation>炮</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="106"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="107"/>
         <source>king</source>
         <translation>帅（将）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="196"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="208"/>
-        <source>0</source>
-        <translation>９ {0?}</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="197"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="209"/>
-        <source>1</source>
-        <translation>１</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="198"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="210"/>
-        <source>2</source>
-        <translation>２</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="199"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="211"/>
-        <source>3</source>
-        <translation>３</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="200"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="212"/>
-        <source>4</source>
-        <translation>４</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="201"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="213"/>
-        <source>5</source>
-        <translation>５</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="202"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="214"/>
-        <source>6</source>
-        <translation>６</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="203"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="215"/>
-        <source>7</source>
-        <translation>７</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="204"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="216"/>
-        <source>8</source>
-        <translation>８</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="205"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="217"/>
-        <source>9</source>
-        <translation>９</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="220"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="235"/>
-        <source> </source>
-        <translation> </translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="221"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="222"/>
         <source>P</source>
         <translation>兵</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="222"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="223"/>
         <source>E</source>
         <translation>相</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="223"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="224"/>
         <source>G</source>
         <translation>仕</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="224"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="225"/>
         <source>C</source>
         <translation>炮</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="225"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="226"/>
         <source>H</source>
         <translation>马</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="226"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="227"/>
         <source>R</source>
         <translation>车</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="227"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="228"/>
         <source>K</source>
         <translation>帅</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="228"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="229"/>
         <source>p</source>
         <translation>卒</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="229"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="230"/>
         <source>e</source>
         <translation>象</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="230"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="231"/>
         <source>g</source>
         <translation>士</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="231"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="232"/>
         <source>c</source>
         <translation>炮</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="232"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="233"/>
         <source>h</source>
         <translation>马</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="233"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="234"/>
         <source>r</source>
         <translation>车</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="234"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="235"/>
         <source>k</source>
         <translation>将</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="290"/>
         <location filename="../projects/lib/src/board/westernboard.cpp" line="292"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="302"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="324"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="294"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="305"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="327"/>
         <source>B</source>
         <translation>后</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="290"/>
         <location filename="../projects/lib/src/board/westernboard.cpp" line="292"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="305"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="321"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="294"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="308"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="324"/>
         <source>F</source>
         <translation>前</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="342"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="366"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="393"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="420"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="347"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="373"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="402"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="431"/>
         <source>=</source>
         <translation>平</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="347"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="374"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="400"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="430"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="352"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="381"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="409"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="441"/>
         <source>+</source>
         <translation>进</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="350"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="371"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="403"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="427"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="355"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="378"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="412"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="438"/>
         <source>-</source>
         <translation>退</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="885"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="896"/>
         <source>%1 Win!</source>
         <translation>%1 胜!</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="915"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="926"/>
         <source>Both sides have no attacks, judged draw!</source>
         <translation>双方无攻击力子，判和！</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="922"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="932"/>
         <source>60 step did not eat, judged draw!</source>
         <translation>60回合未吃子，判和！</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="929"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="938"/>
         <source>Cycle 3 steps, judged draw!</source>
         <translation>循环3次，判和！</translation>
     </message>

@@ -11,6 +11,7 @@ HEADERS += $$PWD/chessengine.h \
     $$PWD/pgngame.h \
     $$PWD/polyglotbook.h \
     $$PWD/timecontrol.h \
+    $$PWD/ucciengine.h \
     $$PWD/uciengine.h \
     $$PWD/moveevaluation.h \
     $$PWD/enginemanager.h \
@@ -55,6 +56,7 @@ SOURCES += $$PWD/chessengine.cpp \
     $$PWD/pgngame.cpp \
     $$PWD/polyglotbook.cpp \
     $$PWD/timecontrol.cpp \
+    $$PWD/ucciengine.cpp \
     $$PWD/uciengine.cpp \
     $$PWD/moveevaluation.cpp \
     $$PWD/enginemanager.cpp \

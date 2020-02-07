@@ -66,11 +66,11 @@ public:
         /*! A book move. */
         Chess::GenericMove move;
         /*!
-             * A weight or score, usually based on popularity
-             * of the move. The higher the weight, the more
-             * likely the move will be played.
-             */
-        //quint16 weight;
+        * A weight or score, usually based on popularity
+        * of the move. The higher the weight, the more
+        * likely the move will be played.
+        */
+        quint16 weight;
         qint32 vscore;
         quint32 win_count;
         quint32 draw_count;

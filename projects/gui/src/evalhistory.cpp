@@ -37,8 +37,9 @@ EvalHistory::EvalHistory(QWidget *parent)
 
     x->setLabel(tr("Step"));
     x->setRange(1, 20); // 5->10
-    x->setTicker(QSharedPointer<QCPAxisTicker>(ticker));
+    x->setTicks(false);
     x->setSubTicks(false);
+    x->setTicker(QSharedPointer<QCPAxisTicker>(ticker));
     x->setLabelColor(QApplication::palette().text().color());
     x->setTickLabelColor(QApplication::palette().text().color());
     x->setTickPen(QApplication::palette().text().color());
@@ -46,6 +47,7 @@ EvalHistory::EvalHistory(QWidget *parent)
 
     y->setLabel(tr("Score"));
     y->setRange(-5, 5); // (-1, 1)->(-5, 5)
+    x->setTicks(false);
     y->setSubTicks(false);
     y->setLabelColor(QApplication::palette().text().color());
     y->setTickLabelColor(QApplication::palette().text().color());
@@ -132,6 +134,9 @@ void EvalHistory::addData(int ply, int score)
         y = 5.0;
     else if (y < -5.0)
         y = -5.0;
+
+    if (ply < 2)
+        m_plot->graph(1 - side)->addData(1, -y);
 
     m_plot->graph(side)->addData(x, y);
 }

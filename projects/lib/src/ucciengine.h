@@ -15,24 +15,24 @@
     along with Sylvan.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef UCIENGINE_H
-#define UCIENGINE_H
+#ifndef UCCIENGINE_H
+#define UCCIENGINE_H
 
 #include <QVarLengthArray>
 #include "chessengine.h"
 
 /*!
- * \brief A chess engine which uses the UCI chess interface.
+ * \brief A chess engine which uses the UCCI chess interface.
  *
- * UCI's specifications: http://wbec-ridderkerk.nl/html/UCIProtocol.html
+ * UCCI's specifications: http://www.xqbase.com/protocol/cchess_ucci.htm
  */
-class LIB_EXPORT UciEngine : public ChessEngine
+class LIB_EXPORT UcciEngine : public ChessEngine
 {
     Q_OBJECT
 
 public:
-    /*! Creates a new UciEngine. */
-    UciEngine(QObject* parent = nullptr);
+    /*! Creates a new UcciEngine. */
+    UcciEngine(QObject* parent = nullptr);
 
     // Inherited from ChessEngine
     virtual void endGame(const Chess::Result& result);
@@ -62,7 +62,7 @@ private:
         PonderHit
     };
 
-    static QStringRef parseUciTokens(const QStringRef& first,
+    static QStringRef parseUcciTokens(const QStringRef& first,
                                      const QString* types,
                                      int typeCount,
                                      QVarLengthArray<QStringRef>& tokens,
@@ -100,4 +100,4 @@ private:
     QStringList m_comboVariants;
 };
 
-#endif // UCIENGINE_H
+#endif // UCCIENGINE_H

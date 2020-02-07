@@ -563,11 +563,11 @@ void Board::generateMoves(QVarLengthArray<Move>& moves, int pieceType) const
 
     // Cut the wall squares (the ones with a value of WallPiece) off
     // from the squares to iterate over. It bumps the speed up a bit.
-    unsigned begin = (m_width + 2) * 2;
-    unsigned end = m_squares.size() - begin;
+    int begin = (m_width + 2) * 2;
+    int end = m_squares.size() - begin;
 
     moves.clear();
-    for (unsigned sq = begin; sq < end; sq++)
+    for (int sq = begin; sq < end; sq++)
     {
         Piece tmp = m_squares[sq];
         if (tmp.side() == m_side
@@ -642,7 +642,7 @@ int Board::captureType(const Move& move) const
     return Piece::NoPiece;
 }
 
-bool Board::vIsBan(const Move& move) {
+bool Board::vIsBan() {
 
     bool isBan = false;
 
@@ -695,7 +695,7 @@ bool Board::vIsLegalMove(const Move& move)
         if (repeatCount >= 2)
         {
             Board* newB = this->copy();
-            isBan = newB->vIsBan(move);
+            isBan = newB->vIsBan();
             delete newB;
         }
     }

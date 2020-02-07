@@ -148,6 +148,9 @@ BookExportTask::BookExportTask(PgnGameIterator* it,
                    0, it->count(),
                    parent)
 {
+    Q_UNUSED(file);
+    Q_UNUSED(maxDepth);
+
     m_file->moveToThread(this);
 }
 
@@ -211,6 +214,8 @@ PgnExportTask::PgnExportTask(PgnGameIterator* it,
     //m_it(it),
     //m_file(file)
 {
+    Q_UNUSED(file);
+
     m_file->moveToThread(this);
 }
 

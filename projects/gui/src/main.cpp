@@ -40,15 +40,20 @@ int main(int argc, char* argv[])
     qRegisterMetaType<Chess::Result>("Chess::Result");
     qRegisterMetaType<MoveEvaluation>("MoveEvaluation");
 
+    SylvanApplication app(argc, argv);
+
+    QTranslator translator[3];
+    QString prefix[3] = { "sylvan", "qtbase", "widgets" };
+    QString dir = app.applicationDirPath() + "/" + "translations";
     QLoggingCategory::defaultCategory()->setEnabled(QtDebugMsg, true);
 
-    SylvanApplication app(argc, argv);
-    QString dir = app.applicationDirPath() + "/" + "translations";
-
-    QTranslator translator;
-    translator.load(QLocale(), "qt", "_", dir/*"translations"*/, ".qm");
-    app.installTranslator(&translator);
+    for (int i = 0; i < 3; i++)
+    {
+        translator[i].load(QLocale(), prefix[i], "_", dir, ".qm");
+        app.installTranslator(&translator[i]);
+    }
 
     app.newDefaultGame();
+
     return app.exec();
 }

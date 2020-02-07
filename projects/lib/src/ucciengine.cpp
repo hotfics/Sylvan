@@ -15,7 +15,7 @@
     along with Sylvan.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "uciengine.h"
+#include "ucciengine.h"
 
 #include <QString>
 #include <QStringList>
@@ -32,11 +32,11 @@
 
 namespace {
 
-QString variantFromUci(QString str, bool uciPrefix = true)
+QString variantFromUcci(QString str, bool ucciPrefix = true)
 {
-    if (uciPrefix)
+    if (ucciPrefix)
     {
-        if (!str.startsWith("UCI_"))
+        if (!str.startsWith("UCCI_"))
             return QString();
         str = str.mid(4);
     }
@@ -52,19 +52,19 @@ QString variantFromUci(QString str, bool uciPrefix = true)
     return str;
 }
 
-QString variantToUci(const QString& str, bool uciPrefix = true)
+QString variantToUcci(const QString& str, bool ucciPrefix = true)
 {
     if (str.isEmpty() || str == "standard")
         return QString();
 
     if (str == "fischerandom")
-        return uciPrefix ? "UCI_Chess960" : "chess960";
-    if (!uciPrefix)
+        return ucciPrefix ? "UCCI_Chess960" : "chess960";
+    if (!ucciPrefix)
         return str;
     if (str == "caparandom")
-        return "UCI_CapaRandom";
+        return "UCCI_CapaRandom";
 
-    QString tmp = QString("UCI_%1").arg(str);
+    QString tmp = QString("UCCI_%1").arg(str);
     tmp[4] = tmp.at(4).toUpper();
     return tmp;
 }
@@ -82,7 +82,7 @@ QStringRef joinTokens(const QVarLengthArray<QStringRef>& tokens)
 
 } // namespace
 
-UciEngine::UciEngine(QObject* parent)
+UcciEngine::UcciEngine(QObject* parent)
     : ChessEngine(parent),
       m_useDirectPv(false),
       m_sendOpponentsName(false),
@@ -94,16 +94,16 @@ UciEngine::UciEngine(QObject* parent)
       m_rePing(false)
 {
     addVariant("standard");
-    setName("UciEngine");
+    setName("UcciEngine");
 }
 
-void UciEngine::startProtocol()
+void UcciEngine::startProtocol()
 {
-    // Tell the engine to turn on UCI mode
-    write("uci");
+    // Tell the engine to turn on UCCI mode
+    write("ucci");
 }
 
-QString UciEngine::positionString(bool position)
+QString UcciEngine::positionString(bool position)
 {
     QString str("");
 
@@ -118,13 +118,13 @@ QString UciEngine::positionString(bool position)
     return str;
 }
 
-void UciEngine::sendPosition()
+void UcciEngine::sendPosition()
 {
     write(positionString(true));
     write(positionString(false));
 }
 
-void UciEngine::startGame()
+void UcciEngine::startGame()
 {
     Q_ASSERT(supportsVariant(board()->variant()));
     const QList<QString> directPvList = {"giveaway", "suicide", "antichess"};
@@ -142,23 +142,23 @@ void UciEngine::startGame()
     m_startFen = board()->fenString(Chess::Board::XFen);
     setVariant(board()->variant());
 
-    write("ucinewgame");
+    write("newgame");
 
     if (m_canPonder)
-        sendOption("Ponder", pondering());
+        sendOption("ponder", pondering());
 
     if (m_sendOpponentsName)
     {
         QString opType = opponent()->isHuman() ? "human" : "computer";
         QString value = QString("none none %1 %2")
                 .arg(opType, opponent()->name());
-        sendOption("UCI_Opponent", value);
+        sendOption("UCCI_Opponent", value);
     }
 
     sendPosition();
 }
 
-void UciEngine::endGame(const Chess::Result& result)
+void UcciEngine::endGame(const Chess::Result& result)
 {
     m_ignoreThinking = true;
     if (stopThinking())
@@ -166,7 +166,7 @@ void UciEngine::endGame(const Chess::Result& result)
     ChessEngine::endGame(result);
 }
 
-void UciEngine::makeMove(const Chess::Move& move)
+void UcciEngine::makeMove(const Chess::Move& move)
 {
     if (!m_ponderMove.isNull())
     {
@@ -217,7 +217,7 @@ void UciEngine::makeMove(const Chess::Move& move)
     }
 }
 
-void UciEngine::makeBookMove(const Chess::Move& move)
+void UcciEngine::makeBookMove(const Chess::Move& move)
 {
     if (stopThinking())
         ping(false);
@@ -226,7 +226,7 @@ void UciEngine::makeBookMove(const Chess::Move& move)
     ChessEngine::makeBookMove(move);
 }
 
-void UciEngine::startThinking()
+void UcciEngine::startThinking()
 {
     if (m_ponderState == PonderHit)
     {
@@ -285,7 +285,7 @@ void UciEngine::startThinking()
     write(command);
 }
 
-void UciEngine::startPondering()
+void UcciEngine::startPondering()
 {
     if (!pondering() || m_ponderMove.isNull())
         return;
@@ -296,40 +296,40 @@ void UciEngine::startPondering()
     startThinking();
 }
 
-void UciEngine::clearPonderState()
+void UcciEngine::clearPonderState()
 {
     m_ponderState = NotPondering;
     m_ponderMove = Chess::Move();
     m_ponderMoveSan.clear();
 }
 
-bool UciEngine::isPondering() const
+bool UcciEngine::isPondering() const
 {
     return (m_ponderState != NotPondering);
 }
 
-void UciEngine::sendStop()
+void UcciEngine::sendStop()
 {
     write("stop");
 }
 
-QString UciEngine::protocol() const
+QString UcciEngine::protocol() const
 {
-    return "uci";
+    return "ucci";
 }
 
-bool UciEngine::sendPing()
+bool UcciEngine::sendPing()
 {
     write("isready");
     return true;
 }
 
-void UciEngine::sendQuit()
+void UcciEngine::sendQuit()
 {
     write("quit");
 }
 
-QStringRef UciEngine::parseUciTokens(const QStringRef& first,
+QStringRef UcciEngine::parseUcciTokens(const QStringRef& first,
                                      const QString* types,
                                      int typeCount,
                                      QVarLengthArray<QStringRef>& tokens,
@@ -361,7 +361,7 @@ QStringRef UciEngine::parseUciTokens(const QStringRef& first,
     return token;
 }
 
-void UciEngine::parseInfo(const QVarLengthArray<QStringRef>& tokens,
+void UcciEngine::parseInfo(const QVarLengthArray<QStringRef>& tokens,
                           int type,
                           MoveEvaluation* eval)
 {
@@ -451,7 +451,7 @@ void UciEngine::parseInfo(const QVarLengthArray<QStringRef>& tokens,
     }
 }
 
-void UciEngine::parseInfo(const QStringRef& line)
+void UcciEngine::parseInfo(const QStringRef& line)
 {
     static const QString types[] =
     {
@@ -485,7 +485,7 @@ void UciEngine::parseInfo(const QStringRef& line)
 
     while (!token.isNull())
     {
-        token = parseUciTokens(token, types, 16, tokens, type);
+        token = parseUcciTokens(token, types, 16, tokens, type);
         parseInfo(tokens, type, &eval);
     }
     if (eval.isEmpty())
@@ -510,7 +510,7 @@ void UciEngine::parseInfo(const QStringRef& line)
         emit thinking(eval);
 }
 
-EngineOption* UciEngine::parseOption(const QStringRef& line)
+EngineOption* UcciEngine::parseOption(const QStringRef& line)
 {
     enum Keyword
     {
@@ -523,7 +523,7 @@ EngineOption* UciEngine::parseOption(const QStringRef& line)
     };
     static const QString types[] =
     {
-        "name",
+        "option",
         "type",
         "default",
         "min",
@@ -539,12 +539,12 @@ EngineOption* UciEngine::parseOption(const QStringRef& line)
     int max = 0;
 
     int keyword = -1;
-    QStringRef token(nextToken(line));
+    QStringRef token(line);
     QVarLengthArray<QStringRef> tokens;
 
     while (!token.isNull())
     {
-        token = parseUciTokens(token, types, 6, tokens, keyword);
+        token = parseUcciTokens(token, types, 6, tokens, keyword);
         if (tokens.isEmpty() || keyword == -1)
             continue;
 
@@ -597,7 +597,7 @@ EngineOption* UciEngine::parseOption(const QStringRef& line)
     return nullptr;
 }
 
-void UciEngine::parseLine(const QString& line)
+void UcciEngine::parseLine(const QString& line)
 {
     const QStringRef command(firstToken(line));
 
@@ -675,7 +675,7 @@ void UciEngine::parseLine(const QString& line)
         else
             pong();
     }
-    else if (command == "uciok")
+    else if (command == "ucciok")
     {
         if (state() == Starting)
         {
@@ -686,14 +686,14 @@ void UciEngine::parseLine(const QString& line)
     else if (command == "id")
     {
         QStringRef tag(nextToken(command));
-        if (tag == "name" && name() == "UciEngine")
+        if (tag == "name" && name() == "UcciEngine")
             setName(nextToken(tag, true).toString());
     }
     else if (command == "registration")
     {
         if (nextToken(command) == "error")
         {
-            qWarning("Failed to register UCI engine %s",
+            qWarning("Failed to register UCCI engine %s",
                      qUtf8Printable(name()));
             write("register later");
         }
@@ -704,21 +704,21 @@ void UciEngine::parseLine(const QString& line)
         QString variant;
 
         if (option == nullptr || !option->isValid())
-            qWarning("Invalid UCI option from %s: %s",
+            qWarning("Invalid UCCI option from %s: %s",
                      qUtf8Printable(name()), qUtf8Printable(line));
-        else if (!(variant = variantFromUci(option->name())).isEmpty())
+        else if (!(variant = variantFromUcci(option->name())).isEmpty())
             addVariant(variant);
-        else if (option->name() == "UCI_Variant")
+        else if (option->name() == "UCCI_Variant")
             addVariantsFromOption(option);
-        else if (option->name() == "UCI_Opponent")
+        else if (option->name() == "UCCI_Opponent")
             m_sendOpponentsName = true;
         else if (option->name() == "Ponder")
             m_canPonder = true;
-        else if (option->name().startsWith("UCI_") &&
-                 option->name() != "UCI_LimitStrength" &&
-                 option->name() != "UCI_Elo")
+        else if (option->name().startsWith("UCCI_") &&
+                 option->name() != "UCCI_LimitStrength" &&
+                 option->name() != "UCCI_Elo")
         {
-            // TODO: Deal with UCI features
+            // TODO: Deal with UCCI features
         }
         else
         {
@@ -730,7 +730,7 @@ void UciEngine::parseLine(const QString& line)
     }
 }
 
-void UciEngine::addVariantsFromOption(const EngineOption* option)
+void UcciEngine::addVariantsFromOption(const EngineOption* option)
 {
     const auto combo = dynamic_cast<const EngineComboOption*>(option);
     if (!combo)
@@ -744,23 +744,23 @@ void UciEngine::addVariantsFromOption(const EngineOption* option)
     const auto choices = combo->choices();
     for (const auto& choice : choices)
     {
-        QString variant = variantFromUci(choice, false);
+        QString variant = variantFromUcci(choice, false);
         if (!variant.isEmpty())
             addVariant(variant);
     }
     m_comboVariants = choices;
 }
 
-void UciEngine::setVariant(const QString& variant)
+void UcciEngine::setVariant(const QString& variant)
 {
-    QString uciVariant(variantToUci(variant));
+    QString uciVariant(variantToUcci(variant));
     if (uciVariant != m_variantOption && !m_variantOption.isEmpty())
         sendOption(m_variantOption, false);
 
     if (m_comboVariants.contains(variant))
     {
         m_variantOption.clear();
-        sendOption("UCI_Variant", variantToUci(variant, false));
+        sendOption("UCI_Variant", variantToUcci(variant, false));
     }
     else
     {
@@ -770,7 +770,7 @@ void UciEngine::setVariant(const QString& variant)
     }
 }
 
-void UciEngine::setPonderMove(const QString& moveString)
+void UcciEngine::setPonderMove(const QString& moveString)
 {
     // Stockfish sends "(none)" and Komodo sends "0000"
     // when it responds to "ponderhit".
@@ -804,7 +804,7 @@ void UciEngine::setPonderMove(const QString& moveString)
     }
 }
 
-QString UciEngine::directPv(const QVarLengthArray<QStringRef>& tokens)
+QString UcciEngine::directPv(const QVarLengthArray<QStringRef>& tokens)
 {
     QString pv;
     for( auto token : tokens)
@@ -815,7 +815,7 @@ QString UciEngine::directPv(const QVarLengthArray<QStringRef>& tokens)
     return pv;
 }
 
-QString UciEngine::sanPv(const QVarLengthArray<QStringRef>& tokens)
+QString UcciEngine::sanPv(const QVarLengthArray<QStringRef>& tokens)
 {
     Chess::Board* board = this->board();
     QString pv;
@@ -855,10 +855,10 @@ QString UciEngine::sanPv(const QVarLengthArray<QStringRef>& tokens)
     return pv;
 }
 
-void UciEngine::sendOption(const QString& name, const QVariant& value)
+void UcciEngine::sendOption(const QString& name, const QVariant& value)
 {
     if (!value.isNull())
-        write(QString("setoption name %1 value %2").arg(name, value.toString()));
+        write(QString("setoption %1 %2").arg(name, value.toString()));
     else
-        write(QString("setoption name %1").arg(name));
+        write(QString("setoption %1").arg(name));
 }

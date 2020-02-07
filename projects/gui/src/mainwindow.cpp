@@ -350,7 +350,7 @@ void MainWindow::createToolBars()
     addToolBar(toolBar);
 
 
-    QAction* m_engineAnalyzeAct;
+    //QAction* m_engineAnalyzeAct;
 
     this->m_linkChessBoardAct = new QAction(this);
     this->m_linkChessBoardAct->setObjectName(QStringLiteral("LinkChessBoard"));
@@ -417,8 +417,8 @@ void MainWindow::createToolBars()
 
     /*this->m_toolBar->addAction(this->m_linkChessBoardAct);
     this->m_toolBar->addAction(this->m_engineThinkAct);
-    this->m_toolBar->addAction(this->m_engineStopAct);*/
-    this->m_toolBar->addAction(this->m_engineAnalyzeAct);
+    this->m_toolBar->addAction(this->m_engineStopAct);
+    this->m_toolBar->addAction(this->m_engineAnalyzeAct);*/
     this->m_toolBar->addAction(this->m_engineSettingAct);
     this->m_toolBar->addAction(this->m_aboutAct);
 
