@@ -24,19 +24,20 @@
 #include "boardtransition.h"
 
 #define STANDARD_MOVE_HELPER(OP, SIDE1, SIDE2)\
-while(true){\
+while(true)\
+{\
     targetSquare OP 11;\
     if (!isValidSquare(chessSquare(targetSquare)))\
         break;\
     Piece mpiece = pieceAt(targetSquare);\
-    if (mpiece.side() == side) {\
-        if (mpiece.type() == chessType) {\
-            if (side == Side::Red) {\
+    if (mpiece.side() == side)\
+    {\
+        if (mpiece.type() == chessType)\
+        {\
+            if (side == Side::Red)\
                 stQH = SIDE1;\
-            }\
-            else {\
+            else\
                 stQH = SIDE2;\
-            }\
             isQH = true;\
             goto QH_BRANCH;\
         }\
@@ -45,47 +46,43 @@ while(true){\
 
 #define STANDARD_MOVE_HELPER2(NAME, ARR, IDX)\
 str += strnumName[NAME];\
-if (ty == fy) {\
+if (ty == fy)\
+{\
     str += tr("=");\
     str += ARR[IDX];\
 }\
-else {\
-   if (target < source) {\
+else
+{\
+   if (target < source)\
        str += tr("+");\
-   }\
-   else {\
+   else\
        str += tr("-");\
-   }\
-   if (chessType == Elephant || chessType == Guard || chessType == Horse) {\
+   if (chessType == Elephant || chessType == Guard || chessType == Horse)\
        str += ARR[IDX];\
-   }\
-   else {\
+   else\
        str += ARR[abs(fy - ty)];\
-   }\
 }
 
 #define STANDARD_MOVE_HELPER3(NAME, ARR, IDX)\
-if (ty == fy) {\
+if (ty == fy)\
+{\
     str = strnumName[NAME];\
     str += ARR[IDX];\
     str += tr("=");\
     str += ARR[IDX];\
 }\
-else {\
+else\
+{\
     str = strnumName[chessType];\
     str += ARR[IDX];\
-    if (target < source) {\
+    if (target < source)\
        str += tr("+");\
-    }\
-    else {\
+    else\
        str += tr("-");\
-    }\
-    if (chessType == Elephant || chessType == Guard || chessType == Horse) {\
-    str += ARR[IDX];\
-    }\
-    else {\
-       str += ARR[abs(fy-ty)];\
-    }\
+    if (chessType == Elephant || chessType == Guard || chessType == Horse)\
+        str += ARR[IDX];\
+    else\
+        str += ARR[abs(fy - ty)];\
 }
 
 namespace Chess {
@@ -250,8 +247,10 @@ Move WesternBoard::moveFromStandardString(const QString& str)
     {
         QString cn = standardMoveString(moves[i]);
 
-        if (str == cn) {
-            if (vIsLegalMove(moves[i])) {
+        if (str == cn)
+        {
+            if (vIsLegalMove(moves[i]))
+            {
                 return moves[i];
             }
         }
@@ -292,6 +291,7 @@ QString WesternBoard::standardMoveString(const Move& move)
         STANDARD_MOVE_HELPER(-=, tr("B"), tr("F"));
         targetSquare = source;
         STANDARD_MOVE_HELPER(+=, tr("F"), tr("B"));
+<<<<<<< HEAD
 #endif
 #if 1
         while(true){
@@ -332,11 +332,15 @@ QString WesternBoard::standardMoveString(const Move& move)
             }
         }
     #endif
+=======
+>>>>>>> 99a0b992686a31f8c4d4ad5eacbd5d80260dc894
     }
 
 QH_BRANCH:
-    if (isQH == true) {
+    if (isQH == true)
+    {
         str = stQH;
+<<<<<<< HEAD
         if (side == Side::Red) {
 #if 0
             STANDARD_MOVE_HELPER2(chessType, strnumCn, 10 - (tx + 1));
@@ -448,6 +452,26 @@ QH_BRANCH:
                 }
             }
 #endif
+=======
+        if (side == Side::Red)
+        {
+            STANDARD_MOVE_HELPER2(chessType, strnumCn, 10 - (tx + 1));
+        }
+        else
+        {
+            STANDARD_MOVE_HELPER2(chessType + 7, strnumEn, (tx + 1));
+        }
+    }
+    else
+    {
+        if (side == Side::Red)
+        {
+            STANDARD_MOVE_HELPER3(chessType, strnumCn, 10 - (fx + 1));
+        }
+        else
+        {
+            STANDARD_MOVE_HELPER3(chessType + 7, strnumEn, (fx + 1));
+>>>>>>> 99a0b992686a31f8c4d4ad5eacbd5d80260dc894
         }
     }
 
@@ -627,25 +651,24 @@ void WesternBoard::generateMovesForPiece(QVarLengthArray<Move>& moves,
                 int targetSquare = sourceSquare + m_RPawnOffsets[i];
                 if (!isValidSquare(chessSquare(targetSquare)))
                     continue;
-                if (sourceSquare > 75) {
+                if (sourceSquare > 75)
                     if (i != 0)  continue;
-                }
 
                 Piece capture = pieceAt(targetSquare);
                 if (capture.isEmpty() || capture.side() == opSide)
                     moves.append(Move(sourceSquare, targetSquare));
             }
         }
-        else {
+        else
+        {
             Side opSide = sideToMove().opposite();
             for (int i = 0; i < m_BPawnOffsets.size(); i++)
             {
                 int targetSquare = sourceSquare + m_BPawnOffsets[i];
                 if (!isValidSquare(chessSquare(targetSquare)))
                     continue;
-                if (sourceSquare < 78) {
+                if (sourceSquare < 78)
                     if (i != 0)  continue;
-                }
 
                 Piece capture = pieceAt(targetSquare);
                 if (capture.isEmpty() || capture.side() == opSide)
@@ -712,7 +735,6 @@ void WesternBoard::generateMovesForPiece(QVarLengthArray<Move>& moves,
     case Cannon:
     {
         Side side = sideToMove();
-
         for (int i = 0; i < m_RookOffsets.size(); i++)
         {
             int offset = m_RookOffsets[i];

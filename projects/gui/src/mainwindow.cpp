@@ -408,7 +408,7 @@ void MainWindow::createToolBars()
 
     this->m_toolBar = new QToolBar(this);
     this->m_toolBar->setObjectName(QStringLiteral("m_toolBar"));
-    this->m_toolBar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon); //  ToolButtonTextUnderIcon); ToolButtonIconOnly
+    this->m_toolBar->setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
     /*this->m_toolBar->setMovable(false);
     this->m_toolBar->setAllowedAreas(Qt::TopToolBarArea);*/
