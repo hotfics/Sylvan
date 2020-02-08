@@ -1423,6 +1423,7 @@
     </message>
     <message>
         <location filename="../projects/gui/src/mainwindow.cpp" line="406"/>
+        <location filename="../projects/gui/src/mainwindow.cpp" line="1163"/>
         <source>About</source>
         <translation>关于</translation>
     </message>
@@ -1560,6 +1561,11 @@
         <translation>%1变体的FEN字符串无效：</translation>
     </message>
     <message>
+        <location filename="../projects/gui/src/mainwindow.cpp" line="1158"/>
+        <source>CChess GUI - Sylvan %1</source>
+        <translation>中国象棋界面程序——森罗万象 %1</translation>
+    </message>
+    <message>
         <location filename="../projects/gui/src/mainwindow.cpp" line="1160"/>
         <source>Qt Version %1</source>
         <translation>Qt 版本 %1</translation>
@@ -1568,11 +1574,6 @@
         <location filename="../projects/gui/src/mainwindow.cpp" line="1161"/>
         <source>Copyright 2019 </source>
         <translation>版权所有 2019 </translation>
-    </message>
-    <message>
-        <location filename="../projects/gui/src/mainwindow.cpp" line="1163"/>
-        <source>About CChess GUI</source>
-        <translation>关于CChess GUI</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/mainwindow.cpp" line="1191"/>

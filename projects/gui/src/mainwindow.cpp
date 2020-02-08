@@ -1155,12 +1155,12 @@ void MainWindow::pasteFen()
 void MainWindow::showAboutDialog()
 {
     QString html;
-    html += "<h3>" + QString("Sylvan CChess GUI %1")
+    html += "<h3>" + QString(tr("CChess GUI - Sylvan %1"))
             .arg(SylvanApplication::applicationVersion()) + "</h3>";
     html += "<p>" + tr("Qt Version %1").arg(qVersion()) + "</p>";
     html += "<p>" + tr("Copyright 2019 ") + "</p>";
     html += "<p>" + tr("Author: Wilbert Lee") + "</p>";
-    QMessageBox::about(this, tr("About CChess GUI"), html);
+    QMessageBox::about(this, tr("About"), html);
 }
 
 // 

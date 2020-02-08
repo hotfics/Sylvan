@@ -60,8 +60,6 @@ public:
     virtual ~MainWindow();
     QString windowListTitle() const;
 
-    //TestThread* t;
-
 public slots:
     void addGame(ChessGame* game);
 
