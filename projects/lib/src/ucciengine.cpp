@@ -265,7 +265,7 @@ void UcciEngine::startThinking()
             command += " infinite";
     }
     else if (myTc->timePerMove() > 0)
-        command += QString(" movetime %1").arg(myTc->timeLeft());
+        command += QString(" time %1").arg(myTc->timeLeft());
     else
     {
         command += QString(" wtime %1").arg(redTc->timeLeft());
