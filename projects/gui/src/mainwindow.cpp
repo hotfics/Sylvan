@@ -1163,7 +1163,6 @@ void MainWindow::showAboutDialog()
     QMessageBox::about(this, tr("About"), html);
 }
 
-// 
 void MainWindow::lockCurrentGame()
 {
     if (m_game != nullptr)
