@@ -23,68 +23,6 @@
 #include "westernzobrist.h"
 #include "boardtransition.h"
 
-#define STANDARD_MOVE_HELPER(OP, SIDE1, SIDE2)\
-while(true)\
-{\
-    targetSquare OP 11;\
-    if (!isValidSquare(chessSquare(targetSquare)))\
-        break;\
-    Piece mpiece = pieceAt(targetSquare);\
-    if (mpiece.side() == side)\
-    {\
-        if (mpiece.type() == chessType)\
-        {\
-            if (side == Side::Red)\
-                stQH = SIDE1;\
-            else\
-                stQH = SIDE2;\
-            isQH = true;\
-            goto QH_BRANCH;\
-        }\
-    }\
-}
-
-#define STANDARD_MOVE_HELPER2(NAME, ARR, IDX)\
-str += strnumName[NAME];\
-if (ty == fy)\
-{\
-    str += tr("=");\
-    str += ARR[IDX];\
-}\
-else
-{\
-   if (target < source)\
-       str += tr("+");\
-   else\
-       str += tr("-");\
-   if (chessType == Elephant || chessType == Guard || chessType == Horse)\
-       str += ARR[IDX];\
-   else\
-       str += ARR[abs(fy - ty)];\
-}
-
-#define STANDARD_MOVE_HELPER3(NAME, ARR, IDX)\
-if (ty == fy)\
-{\
-    str = strnumName[NAME];\
-    str += ARR[IDX];\
-    str += tr("=");\
-    str += ARR[IDX];\
-}\
-else\
-{\
-    str = strnumName[chessType];\
-    str += ARR[IDX];\
-    if (target < source)\
-       str += tr("+");\
-    else\
-       str += tr("-");\
-    if (chessType == Elephant || chessType == Guard || chessType == Horse)\
-        str += ARR[IDX];\
-    else\
-        str += ARR[abs(fy - ty)];\
-}
-
 namespace Chess {
 
 WesternBoard::WesternBoard(WesternZobrist* zobrist)
@@ -215,22 +153,22 @@ void WesternBoard::vInitialize()
     strnumEn[9] = "９";
 
     strnumName.resize(16);
-    strnumName[0] = tr(" ");
-    strnumName[1] = tr("P");
-    strnumName[2] = tr("E");
-    strnumName[3] = tr("G");
-    strnumName[4] = tr("C");
-    strnumName[5] = tr("H");
-    strnumName[6] = tr("R");
-    strnumName[7] = tr("K");
-    strnumName[8] = tr("p");
-    strnumName[9] = tr("e");
-    strnumName[10] = tr("g");
-    strnumName[11] = tr("c");
-    strnumName[12] = tr("h");
-    strnumName[13] = tr("r");
-    strnumName[14] = tr("k");
-    strnumName[15] = tr(" ");
+    strnumName[0] = "错";
+    strnumName[1] = "兵";
+    strnumName[2] = "相";
+    strnumName[3] = "仕";
+    strnumName[4] = "炮";
+    strnumName[5] = "马";
+    strnumName[6] = "车";
+    strnumName[7] = "帅";
+    strnumName[8]  = "卒";
+    strnumName[9]  = "象";
+    strnumName[10] = "士";
+    strnumName[11] = "炮";
+    strnumName[12] = "马";
+    strnumName[13] = "车";
+    strnumName[14] = "将";
+    strnumName[15] = "错";
 }
 
 int WesternBoard::captureType(const Move& move) const
@@ -264,6 +202,7 @@ QString WesternBoard::lanMoveString(const Move& move)
     return Board::lanMoveString(move);
 }
 
+
 QString WesternBoard::standardMoveString(const Move& move)
 {
     QString str;
@@ -287,13 +226,6 @@ QString WesternBoard::standardMoveString(const Move& move)
     if (chessType != Elephant || chessType != Guard || chessType != King)
     {
         int targetSquare = source;
-#if 0
-        STANDARD_MOVE_HELPER(-=, tr("B"), tr("F"));
-        targetSquare = source;
-        STANDARD_MOVE_HELPER(+=, tr("F"), tr("B"));
-<<<<<<< HEAD
-#endif
-#if 1
         while(true){
             targetSquare -= 11;
             if (!isValidSquare(chessSquare(targetSquare)))
@@ -331,24 +263,16 @@ QString WesternBoard::standardMoveString(const Move& move)
                 }
             }
         }
-    #endif
-=======
->>>>>>> 99a0b992686a31f8c4d4ad5eacbd5d80260dc894
     }
 
+
 QH_BRANCH:
-    if (isQH == true)
-    {
+    if (isQH == true) {
         str = stQH;
-<<<<<<< HEAD
         if (side == Side::Red) {
-#if 0
-            STANDARD_MOVE_HELPER2(chessType, strnumCn, 10 - (tx + 1));
-#endif
-#if 1
             str += strnumName[chessType];
             if (ty == fy) {
-                str += tr("=");
+                str += ".";
                 str += strnumCn[10 - (tx + 1)];
             }
             else {
@@ -365,16 +289,11 @@ QH_BRANCH:
                     str += strnumCn[abs(fy - ty)];
                 }
             }
-#endif
         }
         else {
-#if 0
-            STANDARD_MOVE_HELPER2(chessType + 7, strnumEn, (tx + 1));
-#endif
-#if 1
             str += strnumName[chessType + 7];
             if (ty == fy) {
-                str += tr("=");
+                str += tr(".");
                 str += strnumEn[(tx + 1)];
             }
             else {
@@ -391,19 +310,14 @@ QH_BRANCH:
                     str += strnumEn[abs(fy - ty)];
                 }
             }
-#endif
         }
     }
     else {
         if (side == Side::Red) {
-#if 0
-           STANDARD_MOVE_HELPER3(chessType, strnumCn, 10 - (fx + 1));
-#endif
-#if 1
             if (ty == fy) {
                 str = strnumName[chessType];
                 str += strnumCn[10 - (fx + 1)];
-                str += tr("=");
+                str += tr(".");
                 str += strnumCn[10 - (tx + 1)];
             }
             else {
@@ -422,17 +336,12 @@ QH_BRANCH:
                     str += strnumCn[abs(fy-ty)];
                 }
             }
-#endif
         }
         else {
-#if 0
-            STANDARD_MOVE_HELPER3(chessType + 7, strnumEn, (fx + 1));
-#endif
-#if 1
             if (ty == fy) {
                 str = strnumName[chessType + 7];
                 str += strnumEn[(fx + 1)];
-                str += tr("=");
+                str += tr(".");
                 str += strnumEn[(tx + 1)];
             }
             else {
@@ -451,27 +360,6 @@ QH_BRANCH:
                     str += strnumEn[abs(fy - ty)];
                 }
             }
-#endif
-=======
-        if (side == Side::Red)
-        {
-            STANDARD_MOVE_HELPER2(chessType, strnumCn, 10 - (tx + 1));
-        }
-        else
-        {
-            STANDARD_MOVE_HELPER2(chessType + 7, strnumEn, (tx + 1));
-        }
-    }
-    else
-    {
-        if (side == Side::Red)
-        {
-            STANDARD_MOVE_HELPER3(chessType, strnumCn, 10 - (fx + 1));
-        }
-        else
-        {
-            STANDARD_MOVE_HELPER3(chessType + 7, strnumEn, (fx + 1));
->>>>>>> 99a0b992686a31f8c4d4ad5eacbd5d80260dc894
         }
     }
 
