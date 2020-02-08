@@ -153,7 +153,7 @@ void WesternBoard::vInitialize()
     strnumEn[9] = "９";
 
     strnumName.resize(16);
-    strnumName[0] = "错";
+    strnumName[0] = " ";
     strnumName[1] = "兵";
     strnumName[2] = "相";
     strnumName[3] = "仕";
@@ -168,7 +168,7 @@ void WesternBoard::vInitialize()
     strnumName[12] = "马";
     strnumName[13] = "车";
     strnumName[14] = "将";
-    strnumName[15] = "错";
+    strnumName[15] = " ";
 }
 
 int WesternBoard::captureType(const Move& move) const
@@ -272,7 +272,7 @@ QH_BRANCH:
         if (side == Side::Red) {
             str += strnumName[chessType];
             if (ty == fy) {
-                str += ".";
+                str += tr("=");
                 str += strnumCn[10 - (tx + 1)];
             }
             else {
@@ -293,7 +293,7 @@ QH_BRANCH:
         else {
             str += strnumName[chessType + 7];
             if (ty == fy) {
-                str += tr(".");
+                str += tr("=");
                 str += strnumEn[(tx + 1)];
             }
             else {
@@ -317,7 +317,7 @@ QH_BRANCH:
             if (ty == fy) {
                 str = strnumName[chessType];
                 str += strnumCn[10 - (fx + 1)];
-                str += tr(".");
+                str += tr("=");
                 str += strnumCn[10 - (tx + 1)];
             }
             else {
@@ -341,7 +341,7 @@ QH_BRANCH:
             if (ty == fy) {
                 str = strnumName[chessType + 7];
                 str += strnumEn[(fx + 1)];
-                str += tr(".");
+                str += tr("=");
                 str += strnumEn[(tx + 1)];
             }
             else {

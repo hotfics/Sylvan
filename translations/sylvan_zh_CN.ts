@@ -174,38 +174,38 @@
         <translation>配置引擎</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="173"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="177"/>
         <source>Executables (*.exe *.bat *.cmd);;All Files (*.*)</source>
         <translation>可执行文件 (*.exe *.bat *.cmd);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="175"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="179"/>
         <source>All Files (*)</source>
         <translation>所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="199"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="203"/>
         <source>Select Engine Executable</source>
         <translation>选择引擎可执行文件</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="253"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="257"/>
         <source>Select Engine Working Directory</source>
         <translation>选择引擎工作路径</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="309"/>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="345"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="313"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="349"/>
         <source>Engine Error</source>
         <translation>引擎出错</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="384"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="388"/>
         <source>Duplicate Engine Name</source>
         <translation>重复的引擎名称</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="385"/>
+        <location filename="../projects/gui/src/engineconfigurationdlg.cpp" line="389"/>
         <source>An engine with this name already exists</source>
         <translation>具有此名称的引擎已经存在</translation>
     </message>
@@ -350,7 +350,7 @@
         <translation>步</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalhistory.cpp" line="47"/>
+        <location filename="../projects/gui/src/evalhistory.cpp" line="48"/>
         <source>Score</source>
         <translation>分数</translation>
     </message>
@@ -447,13 +447,13 @@
     </message>
     <message>
         <location filename="../projects/gui/ui/gamedatabasedlg.ui" line="98"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="305"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="310"/>
         <source>Copy PGN</source>
         <translation>复制 PGN</translation>
     </message>
     <message>
         <location filename="../projects/gui/ui/gamedatabasedlg.ui" line="114"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="311"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="316"/>
         <source>Copy FEN</source>
         <translation>复制 FEN</translation>
     </message>
@@ -488,107 +488,107 @@
         <translation>变体：</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="284"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="289"/>
         <source>Import Game</source>
         <translation>导入游戏</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="285"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="290"/>
         <source>Portable Game Notation (*.pgn);;All Files (*.*)</source>
         <translation>便携式游戏记号 (*.pgn);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="292"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="297"/>
         <source>Export Game Collection</source>
         <translation>导出游戏集</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="293"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="298"/>
         <source>Portable Game Notation (*.pgn)</source>
         <translation>便携式游戏记号 (*.pgn)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="395"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="400"/>
         <source>Remove</source>
         <translation>移除</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="399"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="404"/>
         <source>PGN database does not exist.</source>
         <translation>PGN数据库不存在。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="400"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="405"/>
         <source>Remove %1 from the list of databases?</source>
         <translation>从数据库列表中移除 %1？</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="413"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="418"/>
         <source>Import</source>
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="419"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="424"/>
         <source>PGN database has been modified since the last import.</source>
         <translation>自上次导入以来，PGN数据库已被修改。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="420"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="425"/>
         <source>The database must be imported again to read it.</source>
         <translation>必须再次导入数据库才能读取它。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="424"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="429"/>
         <source>Error occured while trying to read the PGN database.</source>
         <translation>尝试读取PGN数据库时出错。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="425"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="430"/>
         <source>Importing the database again may fix this problem.</source>
         <translation>再次导入数据库可能会解决此问题。</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="469"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="474"/>
         <source>[Advanced search]</source>
         <translation>[高级搜索]</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="498"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="528"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="503"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="533"/>
         <source>File Error</source>
         <translation>文件错误</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="499"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="529"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="504"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="534"/>
         <source>Error while saving file %1
 %2</source>
         <translation>保存文件时出错 %1
 %2</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="513"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="518"/>
         <source>Opening depth</source>
         <translation>开局深度</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="514"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="519"/>
         <source>Maximum opening depth (plies):</source>
         <translation>最大开局深度 （步数）:</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="519"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="524"/>
         <source>Create Opening Book</source>
         <translation>创建开局库</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="520"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="525"/>
         <source>Polyglot Book File (*.bin)</source>
         <translation>通晓库文件 (*.bin)</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="551"/>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="565"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="556"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="570"/>
         <source>Copied</source>
         <translation>已复制</translation>
     </message>
@@ -1737,12 +1737,12 @@ Do you want to save?</source>
 <context>
     <name>PgnExportTask</name>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="207"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="210"/>
         <source>Export Games</source>
         <translation>导出游戏</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="208"/>
+        <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="211"/>
         <source>Writing %1 games to file</source>
         <translation>写入%1游戏到文件</translation>
     </message>
@@ -2549,167 +2549,93 @@ Do you want to save?</source>
 <context>
     <name>WesternBoard</name>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="101"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="36"/>
         <source>pawn</source>
         <translation>兵（卒）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="102"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="37"/>
         <source>horse</source>
         <translation>马</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="103"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="38"/>
         <source>elephant</source>
         <translation>相（象）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="104"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="39"/>
         <source>guard</source>
         <translation>仕（士）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="105"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="40"/>
         <source>rook</source>
         <translation>车</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="106"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="41"/>
         <source>cannon</source>
         <translation>炮</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="107"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="42"/>
         <source>king</source>
         <translation>帅（将）</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="222"/>
-        <source>P</source>
-        <translation>兵</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="223"/>
-        <source>E</source>
-        <translation>相</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="224"/>
-        <source>G</source>
-        <translation>仕</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="225"/>
-        <source>C</source>
-        <translation>炮</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="226"/>
-        <source>H</source>
-        <translation>马</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="227"/>
-        <source>R</source>
-        <translation>车</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="228"/>
-        <source>K</source>
-        <translation>帅</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="229"/>
-        <source>p</source>
-        <translation>卒</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="230"/>
-        <source>e</source>
-        <translation>象</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="231"/>
-        <source>g</source>
-        <translation>士</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="232"/>
-        <source>c</source>
-        <translation>炮</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="233"/>
-        <source>h</source>
-        <translation>马</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="234"/>
-        <source>r</source>
-        <translation>车</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="235"/>
-        <source>k</source>
-        <translation>将</translation>
-    </message>
-    <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="292"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="294"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="305"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="327"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="237"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="259"/>
         <source>B</source>
         <translation>后</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="292"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="294"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="308"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="324"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="240"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="256"/>
         <source>F</source>
         <translation>前</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="347"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="373"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="402"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="431"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="275"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="296"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="320"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="344"/>
         <source>=</source>
         <translation>平</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="352"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="381"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="409"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="441"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="280"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="304"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="327"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="354"/>
         <source>+</source>
         <translation>进</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="355"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="378"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="412"/>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="438"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="283"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="301"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="330"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="351"/>
         <source>-</source>
         <translation>退</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="896"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="812"/>
         <source>%1 Win!</source>
         <translation>%1 胜!</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="926"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="842"/>
         <source>Both sides have no attacks, judged draw!</source>
         <translation>双方无攻击力子，判和！</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="932"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="848"/>
         <source>60 step did not eat, judged draw!</source>
         <translation>60回合未吃子，判和！</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/board/westernboard.cpp" line="938"/>
+        <location filename="../projects/lib/src/board/westernboard.cpp" line="854"/>
         <source>Cycle 3 steps, judged draw!</source>
         <translation>循环3次，判和！</translation>
     </message>
