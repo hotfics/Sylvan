@@ -4,7 +4,7 @@ Sylvan
 
 <img src="https://github.com/EterCyber/Sylvan/blob/master/projects/gui/res/icons/app.ico"/>
 
-Sylvan is a graphical user interface, command line interface, and Chinese Chess library
+Sylvan is a graphical user interface, command line interface, and Chinese Chess (also called Xiangqi) library
 derived from [Cute Chess](https://github.com/cutechess/cutechess). Sylvan is written in C++ using the [Qt
 framework](https://www.qt.io/).
 
