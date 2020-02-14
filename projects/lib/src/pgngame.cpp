@@ -25,7 +25,7 @@
 #include <pgnstream.h>
 
 #include "board/boardfactory.h"
-#include "econode.h"
+#include "ecconode.h"
 #include "pgngame.h"
 #include "moveevaluation.h"
 
@@ -56,7 +56,7 @@ QTextStream& operator<<(QTextStream& out, const PgnGame& game)
 
 PgnGame::PgnGame()
     : m_startingSide(Chess::Side::Red),
-      m_eco(EcoNode::root()),
+      m_ecco(EccoNode::root()),
       m_tagReceiver(nullptr)
 {
 }
@@ -69,7 +69,7 @@ bool PgnGame::isNull() const
 void PgnGame::clear()
 {
     m_startingSide = Chess::Side();
-    m_eco = EcoNode::root();
+    m_ecco = EccoNode::root();
     m_tags.clear();
     m_moves.clear();
 }
@@ -104,18 +104,18 @@ const QVector<PgnGame::MoveData>& PgnGame::moves() const
     return m_moves;
 }
 
-void PgnGame::addMove(const MoveData& data, bool addEco)
+void PgnGame::addMove(const MoveData& data, bool addEcco)
 {
     m_moves.append(data);
 
-    if (addEco) {
-        m_eco = (m_eco && isStandard()) ? m_eco->child(data.moveString)
+    if (addEcco) {
+        m_ecco = (m_ecco && isStandard()) ? m_ecco->child(data.moveString)
                                         : nullptr;
-        if (m_eco && m_eco->isLeaf())
+        if (m_ecco && m_ecco->isLeaf())
         {
-            setTag("ECO", m_eco->ecoCode());
-            setTag("Opening", m_eco->opening());
-            setTag("Variation", m_eco->variation());
+            setTag("ECCO", m_ecco->ecoCode());
+            setTag("Opening", m_ecco->opening());
+            setTag("Variation", m_ecco->variation());
         }
     }
 }
@@ -310,8 +310,7 @@ bool PgnGame::write(QTextStream& out, PgnMode mode) const
         if (mode == Verbose && !data.comment.isEmpty())
             str += QString(" {%1}").arg(data.comment);
 
-        // Limit the lines to 80 characters
-        if (lineLength == 0 || lineLength + str.size() >= 80)
+        if (m_moves.size() % 2)
         {
             out << "\n" << str;
             lineLength = str.size();

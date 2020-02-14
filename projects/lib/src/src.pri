@@ -4,6 +4,7 @@ DEPENDPATH += $$PWD
 HEADERS += $$PWD/chessengine.h \
     $$PWD/chessgame.h \
     $$PWD/chessplayer.h \
+    $$PWD/ecconode.h \
     $$PWD/engineconfiguration.h \
     $$PWD/engineprocess.h \
     $$PWD/openingbook.h \
@@ -37,7 +38,6 @@ HEADERS += $$PWD/chessengine.h \
     $$PWD/gauntlettournament.h \
     $$PWD/epdrecord.h \
     $$PWD/openingsuite.h \
-    $$PWD/econode.h \
     $$PWD/mersenne.h \
     $$PWD/sprt.h \
     $$PWD/gameadjudicator.h \
@@ -50,6 +50,7 @@ HEADERS += $$PWD/chessengine.h \
 SOURCES += $$PWD/chessengine.cpp \
     $$PWD/chessgame.cpp \
     $$PWD/chessplayer.cpp \
+    $$PWD/ecconode.cpp \
     $$PWD/engineconfiguration.cpp \
     $$PWD/openingbook.cpp \
     $$PWD/pgnstream.cpp \
@@ -81,7 +82,6 @@ SOURCES += $$PWD/chessengine.cpp \
     $$PWD/gauntlettournament.cpp \
     $$PWD/epdrecord.cpp \
     $$PWD/openingsuite.cpp \
-    $$PWD/econode.cpp \
     $$PWD/mersenne.cpp \
     $$PWD/sprt.cpp \
     $$PWD/gameadjudicator.cpp \

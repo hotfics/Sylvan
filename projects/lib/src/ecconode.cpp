@@ -4,7 +4,7 @@
 #include <QDataStream>
 #include <QMutex>
 
-#include <econode.h>
+#include <ecconode.h>
 #include <pgnstream.h>
 
 #include "pgngame.h"
@@ -12,26 +12,26 @@
 namespace {
 
 QStringList s_openings;
-EcoNode* s_root = nullptr;
+EccoNode* s_root = nullptr;
 
-class EcoDeleter
+class EccoDeleter
 {
 public:
-    ~EcoDeleter()
+    ~EccoDeleter()
     {
         delete s_root;
     }
 };
-EcoDeleter s_ecoDeleter;
+EccoDeleter s_eccoDeleter;
 
-int ecoFromString(const QString& ecoString)
+int eccoFromString(const QString& eccoString)
 {
-    if (ecoString.length() < 2)
+    if (eccoString.length() < 2)
         return -1;
-    int hundreds = ecoString.at(0).toUpper().toLatin1() - 'A';
+    int hundreds = eccoString.at(0).toUpper().toLatin1() - 'A';
 
     bool ok = false;
-    int tens = ecoString.right(ecoString.length() - 1).toInt(&ok);
+    int tens = eccoString.right(eccoString.length() - 1).toInt(&ok);
     if (!ok)
         return -1;
 
@@ -40,11 +40,11 @@ int ecoFromString(const QString& ecoString)
 
 } // anonymous namespace
 
-QDataStream& operator<<(QDataStream& out, const EcoNode* node)
+QDataStream& operator<<(QDataStream& out, const EccoNode* node)
 {
     if (!node)
         return out;
-    out << node->m_ecoCode
+    out << node->m_eccoCode
         << node->m_opening
         << node->m_variation
         << node->m_children;
@@ -52,11 +52,11 @@ QDataStream& operator<<(QDataStream& out, const EcoNode* node)
     return out;
 }
 
-QDataStream& operator>>(QDataStream& in, EcoNode*& node)
+QDataStream& operator>>(QDataStream& in, EccoNode*& node)
 {
-    node = new EcoNode;
+    node = new EccoNode;
 
-    in >> node->m_ecoCode
+    in >> node->m_eccoCode
             >> node->m_opening
             >> node->m_variation
             >> node->m_children;
@@ -64,7 +64,7 @@ QDataStream& operator>>(QDataStream& in, EcoNode*& node)
     return in;
 }
 
-void EcoNode::initialize()
+void EccoNode::initialize()
 {
     static QMutex mutex;
     if (s_root)
@@ -88,7 +88,7 @@ void EcoNode::initialize()
     mutex.unlock();
 }
 
-void EcoNode::initialize(PgnStream& in)
+void EccoNode::initialize(PgnStream& in)
 {
     if (s_root)
         return;
@@ -99,8 +99,8 @@ void EcoNode::initialize(PgnStream& in)
         return;
     }
 
-    s_root = new EcoNode;
-    EcoNode* current = s_root;
+    s_root = new EccoNode;
+    EccoNode* current = s_root;
     QMap<QString, int> tmpOpenings;
 
     PgnGame game;
@@ -110,10 +110,10 @@ void EcoNode::initialize(PgnStream& in)
         for (const PgnGame::MoveData& move : game.moves())
         {
             QString san = move.moveString;
-            EcoNode* node = current->child(san);
+            EccoNode* node = current->child(san);
             if (node == nullptr)
             {
-                node = new EcoNode;
+                node = new EccoNode;
                 current->addChild(san, node);
             }
             current = node;
@@ -121,7 +121,7 @@ void EcoNode::initialize(PgnStream& in)
         if (current == s_root)
             continue;
 
-        current->m_ecoCode = ecoFromString(game.tagValue("ECO"));
+        current->m_eccoCode = eccoFromString(game.tagValue("ECO"));
 
         QString val = game.tagValue("Opening");
         if (!val.isEmpty())
@@ -140,24 +140,24 @@ void EcoNode::initialize(PgnStream& in)
     }
 }
 
-const EcoNode* EcoNode::root()
+const EccoNode* EccoNode::root()
 {
     if (!s_root)
         initialize();
     return s_root;
 }
 
-const EcoNode* EcoNode::find(const QVector<PgnGame::MoveData>& moves)
+const EccoNode* EccoNode::find(const QVector<PgnGame::MoveData>& moves)
 {
     if (!s_root)
         return nullptr;
 
-    EcoNode* current = s_root;
-    EcoNode* valid = nullptr;
+    EccoNode* current = s_root;
+    EccoNode* valid = nullptr;
 
     for (const PgnGame::MoveData& move : moves)
     {
-        EcoNode* node = current->child(move.moveString);
+        EccoNode* node = current->child(move.moveString);
         if (node == nullptr)
             return valid;
         if (!node->opening().isEmpty())
@@ -168,7 +168,7 @@ const EcoNode* EcoNode::find(const QVector<PgnGame::MoveData>& moves)
     return nullptr;
 }
 
-void EcoNode::write(const QString& fileName)
+void EccoNode::write(const QString& fileName)
 {
     if (!s_root)
         return;
@@ -185,47 +185,47 @@ void EcoNode::write(const QString& fileName)
     out << s_openings << s_root;
 }
 
-EcoNode::EcoNode()
-    : m_ecoCode(-1),
+EccoNode::EccoNode()
+    : m_eccoCode(-1),
       m_opening(-1)
 {
 }
 
-EcoNode::~EcoNode()
+EccoNode::~EccoNode()
 {
     qDeleteAll(m_children);
 }
 
-bool EcoNode::isLeaf() const
+bool EccoNode::isLeaf() const
 {
-    return m_ecoCode != -1;
+    return m_eccoCode != -1;
 }
 
-QString EcoNode::ecoCode() const
+QString EccoNode::ecoCode() const
 {
-    if (m_ecoCode == -1)
+    if (m_eccoCode == -1)
         return QString();
 
-    QChar segment('A' + m_ecoCode / 100);
-    return segment + QString("%1").arg(m_ecoCode % 100, 2, 10, QChar('0'));
+    QChar segment('A' + m_eccoCode / 100);
+    return segment + QString("%1").arg(m_eccoCode % 100, 2, 10, QChar('0'));
 }
 
-QString EcoNode::opening() const
+QString EccoNode::opening() const
 {
     return m_opening >= 0 ? s_openings[m_opening] : QString();
 }
 
-QString EcoNode::variation() const
+QString EccoNode::variation() const
 {
     return m_variation;
 }
 
-EcoNode* EcoNode::child(const QString& sanMove) const
+EccoNode* EccoNode::child(const QString& sanMove) const
 {
     return m_children.value(sanMove);
 }
 
-void EcoNode::addChild(const QString& sanMove, EcoNode* child)
+void EccoNode::addChild(const QString& sanMove, EccoNode* child)
 {
     m_children[sanMove] = child;
 }

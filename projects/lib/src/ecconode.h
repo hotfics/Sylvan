@@ -28,29 +28,29 @@ class QDataStream;
 class PgnStream;
 
 /*!
- * \brief A node in the ECO tree (Encyclopaedia of Chess Openings)
+ * \brief A node in the ECCO tree (Encyclopaedia of Chinese Chess Openings)
  *
- * The EcoNode class can be used to generate and query a database (a tree) of
- * known chess openings that belong to the Encyclopaedia of Chess Openings.
- * More about ECO: http://en.wikipedia.org/wiki/Encyclopaedia_of_Chess_Openings
+ * The EccoNode class can be used to generate and query a database (a tree) of
+ * known chess openings that belong to the Encyclopaedia of Chinese Chess Openings.
+ * More about ECCO: http://www.xqbase.com/ecco/ecco_intro.htm
  *
- * The ECO tree can be generated from a PGN collection or from a binary file
+ * The ECCO tree can be generated from a PGN collection or from a binary file
  * that's part of the sylvan library (the default). A node corresponding
- * to a PgnGame can be found by traversing the ECO tree as new moves are added
+ * to a PgnGame can be found by traversing the ECCO tree as new moves are added
  * to the game, or by passing all the moves at once to the find() function.
  *
- * \note The Encyclopaedia of Chess Openings only applies to games of standard
+ * \note The Encyclopaedia of Chinese Chess Openings only applies to games of standard
  * chess that start from the default starting position.
  */
-class LIB_EXPORT EcoNode
+class LIB_EXPORT EccoNode
 {
 public:
     /*! Destroys the node and its subtree. */
-    ~EcoNode();
+    ~EccoNode();
 
     /*!
          * Returns true if the node is a leaf node; otherwise returns false.
-         * A leaf node is a node that counts as an opening and has an ECO
+         * A leaf node is a node that counts as an opening and has an ECCO
          * code and a name.
          */
     bool isLeaf() const;
@@ -58,9 +58,9 @@ public:
          * Returns the node's child node corresponding to \a sanMove, or 0
          * if no match is found.
          */
-    EcoNode* child(const QString& sanMove) const;
+    EccoNode* child(const QString& sanMove) const;
     /*!
-         * Returns the node's ECO code, or an empty string if the node is
+         * Returns the node's ECCO code, or an empty string if the node is
          * an inner node.
          */
     QString ecoCode() const;
@@ -75,43 +75,43 @@ public:
          */
     QString variation() const;
 
-    /*! Initializes the ECO tree from the internal opening database. */
+    /*! Initializes the ECCO tree from the internal opening database. */
     static void initialize();
-    /*! Initializes the ECO tree by parsing the PGN games in \a in. */
+    /*! Initializes the ECCO tree by parsing the PGN games in \a in. */
     static void initialize(PgnStream& in);
     /*!
          * Returns the root node of the ECO tree.
          * initialize() is called first if the tree is uninitialized.
          */
-    static const EcoNode* root();
+    static const EccoNode* root();
     /*!
          * Returns the deepest node (closest to the leaves) that matches the
          * opening sequence in \a moves.
          */
-    static const EcoNode* find(const QVector<PgnGame::MoveData>& moves);
-    /*! Writes the ECO tree in binary format to \a fileName. */
+    static const EccoNode* find(const QVector<PgnGame::MoveData>& moves);
+    /*! Writes the ECCO tree in binary format to \a fileName. */
     static void write(const QString& fileName);
 
 private:
-    friend LIB_EXPORT QDataStream& operator<<(QDataStream& out, const EcoNode* node);
-    friend LIB_EXPORT QDataStream& operator>>(QDataStream& in, EcoNode*& node);
+    friend LIB_EXPORT QDataStream& operator<<(QDataStream& out, const EccoNode* node);
+    friend LIB_EXPORT QDataStream& operator>>(QDataStream& in, EccoNode*& node);
 
-    EcoNode();
-    void addChild(const QString& sanMove, EcoNode* child);
+    EccoNode();
+    void addChild(const QString& sanMove, EccoNode* child);
 
-    qint16 m_ecoCode;
+    qint16 m_eccoCode;
     qint32 m_opening;
     QString m_variation;
 
-    QMap<QString, EcoNode*> m_children;
+    QMap<QString, EccoNode*> m_children;
 };
 
 /*! Writes the node \a node to stream \a out. */
-extern LIB_EXPORT QDataStream& operator<<(QDataStream& out, const EcoNode* node);
+extern LIB_EXPORT QDataStream& operator<<(QDataStream& out, const EccoNode* node);
 /*!
  * Reads a node from stream \a in into \a node.
  * \a node should be a null or uninitialized pointer.
  */
-extern LIB_EXPORT QDataStream& operator>>(QDataStream& in, EcoNode*& node);
+extern LIB_EXPORT QDataStream& operator>>(QDataStream& in, EccoNode*& node);
 
 #endif // ECONODE_H

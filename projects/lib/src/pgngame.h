@@ -30,7 +30,7 @@
 
 class QTextStream;
 class PgnStream;
-class EcoNode;
+class EccoNode;
 class QObject;
 namespace Chess { class Board; }
 
@@ -38,7 +38,7 @@ namespace Chess { class Board; }
  * \brief A game of chess in PGN format.
  *
  * PGN (Portable game notation) is a text format for chess games.
- * Specification: http://www.very-best.de/pgn-spec.htm
+ * Specification: http://www.xqbase.com/protocol/cchess_pgn.htm
  *
  * PgnGame is a middle format between text-based PGN games and games
  * played by Sylvan. PgnGame objects are used for converting played
@@ -209,7 +209,7 @@ private:
     bool parseMove(PgnStream& in, bool addEco);
 
     Chess::Side m_startingSide;
-    const EcoNode* m_eco;
+    const EccoNode* m_ecco;
     QMap<QString, QString> m_tags;
     QVector<MoveData> m_moves;
     QObject* m_tagReceiver;
