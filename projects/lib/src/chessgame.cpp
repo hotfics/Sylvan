@@ -15,10 +15,11 @@
     along with Sylvan.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "chessgame.h"
 #include <QThread>
 #include <QTimer>
+
 #include "board/board.h"
+#include "chessgame.h"
 #include "chessplayer.h"
 #include "openingbook.h"
 

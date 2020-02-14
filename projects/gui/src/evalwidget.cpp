@@ -33,7 +33,8 @@ EvalWidget::EvalWidget(QWidget *parent)
       m_player(nullptr),
       m_statsTable(new QTableWidget(1, 5, this)),
       m_pvTable(new QTableWidget(0, 4, this)),
-      m_depth(-1)
+      m_time("0.0"),
+      m_depth("-1")
 {
     m_statsTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
     auto hHeader = m_statsTable->horizontalHeader();
@@ -53,9 +54,6 @@ EvalWidget::EvalWidget(QWidget *parent)
     m_statsTable->setItemPrototype(protoItem);
     m_statsTable->setWordWrap(false);
 
-    /*auto protoItem2 = new QTableWidgetItem;
-    protoItem2->setTextAlignment(Qt::AlignTop | Qt::AlignHCenter);
-    m_pvTable->setItemPrototype(protoItem2);*/
     m_pvTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_pvTable->verticalHeader()->hide();
     m_pvTable->verticalHeader()->setSectionResizeMode(QHeaderView::ResizeMode::ResizeToContents);
@@ -81,8 +79,10 @@ EvalWidget::EvalWidget(QWidget *parent)
 void EvalWidget::clear()
 {
     m_statsTable->clearContents();
-    m_depth = -1;
+    m_time = "0.0";
+    m_depth = "-1";
     m_pv.clear();
+    m_score.clear();
     m_pvTable->clearContents();
     m_pvTable->setRowCount(0);
 }
@@ -151,7 +151,8 @@ void EvalWidget::onEval(const MoveEvaluation& eval)
     }
 
     QString time;
-    float ms = static_cast<float>(eval.time());
+    double ms = static_cast<double>(eval.time());
+    if (eval.time())
         time = QString::number(ms / 1000, 'f', 1);
 
     QString nodeCount;
@@ -161,19 +162,26 @@ void EvalWidget::onEval(const MoveEvaluation& eval)
     QString score = eval.scoreText();
 
     QVector<QTableWidgetItem*> items;
-    items << new QTableWidgetItem(depth)
-          << new QTableWidgetItem(time)
-          << new QTableWidgetItem(score)
-          << new QTableWidgetItem(eval.pv());
+
+    items << new QTableWidgetItem(eval.depth() ? depth : m_depth);
+    items << new QTableWidgetItem(eval.time() ? time : m_time);
+    items << new QTableWidgetItem(score.isEmpty() ? m_score : score);
+    items << new QTableWidgetItem(eval.pv().isEmpty() ? m_pv : eval.pv());
 
     for (int i = 0; i < 3; i++)
         items[i]->setTextAlignment(Qt::AlignTop | Qt::AlignHCenter);
     items[3]->setTextAlignment(Qt::AlignTop | Qt::AlignLeft);
 
-    if (eval.depth() != m_depth || (eval.pv() != m_pv && !m_pv.isEmpty()))
-        m_pvTable->insertRow(0);
-    m_depth = eval.depth();
-    m_pv = eval.pv();
+    m_pvTable->insertRow(0);
+
+    if (eval.depth())
+        m_depth = depth;
+    if (eval.time())
+        m_time = time;
+    if (!eval.scoreText().isEmpty())
+        m_score = score;
+    if (!eval.pv().isEmpty())
+        m_pv = eval.pv();
 
     for (int i = 0; i < items.size(); i++)
         m_pvTable->setItem(0, i, items.at(i));

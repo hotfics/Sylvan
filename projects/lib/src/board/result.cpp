@@ -155,7 +155,7 @@ QString Result::description() const
     else
     {
         if (!str.isEmpty())
-            str += ": ";
+            str += tr(": ");
         str += m_description;
     }
 
@@ -177,7 +177,7 @@ QString Result::toShortString() const
 
 QString Result::toVerboseString() const
 {
-    return toShortString() + QString(" {") + description() + "}";
+    return toShortString() + " {" + description() + "}";
 }
 
 } // namespace Chess

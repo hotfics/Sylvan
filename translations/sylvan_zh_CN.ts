@@ -6,7 +6,7 @@
     <message>
         <location filename="../projects/lib/src/board/board.cpp" line="30"/>
         <source>Zobrist key</source>
-        <translation>Zobrist 键值</translation>
+        <translation>Zobrist键值</translation>
     </message>
 </context>
 <context>
@@ -19,18 +19,18 @@
     <message>
         <location filename="../projects/gui/src/gamedatabasedlg.cpp" line="147"/>
         <source>Parsing %1 PGN games</source>
-        <translation>解析 %1 PGN 游戏</translation>
+        <translation>解析第%1个PGN游戏</translation>
     </message>
 </context>
 <context>
     <name>ChessEngine</name>
     <message>
-        <location filename="../projects/lib/src/chessengine.cpp" line="411"/>
+        <location filename="../projects/lib/src/chessengine.cpp" line="412"/>
         <source>No response to ping</source>
         <translation>对ping没有响应</translation>
     </message>
     <message>
-        <location filename="../projects/lib/src/chessengine.cpp" line="493"/>
+        <location filename="../projects/lib/src/chessengine.cpp" line="494"/>
         <source>Chess protocol was not started in time</source>
         <translation>象棋协议没有及时启动</translation>
     </message>
@@ -38,9 +38,9 @@
 <context>
     <name>ChessGame</name>
     <message>
-        <location filename="../projects/lib/src/chessgame.cpp" line="754"/>
+        <location filename="../projects/lib/src/chessgame.cpp" line="755"/>
         <source>Could not initialize player %1: %2</source>
-        <translation>不能初始化玩家 %1: %2</translation>
+        <translation>不能初始化玩家%1：%2</translation>
     </message>
 </context>
 <context>
@@ -53,17 +53,17 @@
     <message>
         <location filename="../projects/lib/src/enginebuilder.cpp" line="54"/>
         <source>Unknown chess protocol: %1</source>
-        <translation>未知的象棋协议： %1</translation>
+        <translation>未知的象棋协议：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/enginebuilder.cpp" line="83"/>
         <source>Cannot execute command: %1</source>
-        <translation>无法执行命令： %1</translation>
+        <translation>无法执行命令：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/enginebuilder.cpp" line="106"/>
         <source>Cannot start engine %1:%2%3</source>
-        <translation>无法启动引擎 %1：%2%3</translation>
+        <translation>无法启动引擎%1：%2%3</translation>
     </message>
 </context>
 <context>
@@ -358,47 +358,47 @@
 <context>
     <name>EvalWidget</name>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="46"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
         <source>Speed</source>
         <translation>速度</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="46"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
         <source>Hash</source>
         <translation>哈希</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="48"/>
         <source>Ponder</source>
         <translation>后台</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="48"/>
         <source>Probability</source>
         <translation>概率</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="47"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="48"/>
         <source>EGB</source>
         <translation>残局</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="65"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="63"/>
         <source>Depth</source>
         <translation>深度</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="65"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="63"/>
         <source>Time</source>
         <translation>时间</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="66"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="64"/>
         <source>Score</source>
         <translation>分数</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/evalwidget.cpp" line="66"/>
+        <location filename="../projects/gui/src/evalwidget.cpp" line="64"/>
         <source>PV</source>
         <translation>思考变例</translation>
     </message>
@@ -815,7 +815,7 @@
     <message>
         <location filename="../projects/gui/ui/gamesettingswidget.ui" line="78"/>
         <source>PGN/EPD file:</source>
-        <translation>PGN/EPD 文件：</translation>
+        <translation>PGN/EPD文件：</translation>
     </message>
     <message>
         <location filename="../projects/gui/ui/gamesettingswidget.ui" line="93"/>
@@ -1078,12 +1078,12 @@
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="40"/>
         <source>Importing &quot;%1&quot;</source>
-        <translation>正在导入 &quot;%1&quot;</translation>
+        <translation>正在导入&quot;%1&quot;</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="78"/>
         <source>%1 games/sec - %2</source>
-        <translation>%1 游戏/秒 - %2</translation>
+        <translation>%1游戏/秒—%2</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="91"/>
@@ -1093,42 +1093,42 @@
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="96"/>
         <source>Import failed: file does not exist</source>
-        <translation>导入失败： 文件不存在</translation>
+        <translation>导入失败：文件不存在</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="100"/>
         <source>Import failed: I/O error</source>
-        <translation>导入失败： I/O出错</translation>
+        <translation>导入失败：I/O出错</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="104"/>
         <source>Import failed: unknown error</source>
-        <translation>导入失败： 未知错误</translation>
+        <translation>导入失败：未知错误</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="117"/>
         <source>About 5 seconds</source>
-        <translation>大约 5 秒</translation>
+        <translation>大约5秒钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="120"/>
         <source>About 10 seconds</source>
-        <translation>大约 10 秒</translation>
+        <translation>大约10秒钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="123"/>
         <source>Less than a minute</source>
-        <translation>不到 1 分钟</translation>
+        <translation>不到1分钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="126"/>
         <source>About a minute</source>
-        <translation>大约 1 分钟</translation>
+        <translation>大约1分钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/importprogressdlg.cpp" line="128"/>
         <source>About %1 minutes</source>
-        <translation>大约 %1 分钟</translation>
+        <translation>大约%1分钟</translation>
     </message>
 </context>
 <context>
@@ -1141,22 +1141,22 @@
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="179"/>
         <source>Unknown escape sequence: \%1</source>
-        <translation>未知转义序列： \%1</translation>
+        <translation>未知转义序列：\%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="188"/>
         <source>Invalid unicode digit: %1</source>
-        <translation>无效的Unicode数字: %1</translation>
+        <translation>无效的Unicode数字：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="199"/>
         <source>Invalid unicode value: \u%1</source>
-        <translation>无效的Unicode值: \u%1</translation>
+        <translation>无效的Unicode值：\u%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="244"/>
         <source>Unknown token: %1</source>
-        <translation>未知令牌： %1</translation>
+        <translation>未知令牌：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="256"/>
@@ -1166,17 +1166,17 @@
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="288"/>
         <source>Invalid fraction: %1</source>
-        <translation>无效分数： %1</translation>
+        <translation>无效分数：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="303"/>
         <source>Invalid integer: %1</source>
-        <translation>无效整数： %1</translation>
+        <translation>无效整数：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="311"/>
         <source>Invalid value: %1</source>
-        <translation>无效值： %1</translation>
+        <translation>无效值：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="331"/>
@@ -1186,18 +1186,18 @@
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="338"/>
         <source>Invalid key: %1</source>
-        <translation>无效密钥： %1</translation>
+        <translation>无效密钥：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="347"/>
         <source>Expected colon instead of: %1</source>
-        <translation>需要冒号而不是： %1</translation>
+        <translation>需要冒号而不是：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="363"/>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="401"/>
         <source>Expected comma or closing bracket instead of: %1</source>
-        <translation>需要逗号或右括号，而不是： %1</translation>
+        <translation>需要逗号或右括号，而不是：%1</translation>
     </message>
     <message>
         <location filename="../projects/lib/components/json/src/jsonparser.cpp" line="389"/>
@@ -1210,7 +1210,7 @@
     <message>
         <location filename="../projects/lib/components/json/src/jsonserializer.cpp" line="158"/>
         <source>Invalid variant type: %1</source>
-        <translation>无效的变量类型： %1</translation>
+        <translation>无效的变量类型：%1</translation>
     </message>
 </context>
 <context>
@@ -1522,7 +1522,7 @@
     </message>
     <message>
         <location filename="../projects/gui/src/mainwindow.cpp" line="876"/>
-        <location filename="../projects/gui/src/mainwindow.cpp" line="1193"/>
+        <location filename="../projects/gui/src/mainwindow.cpp" line="1192"/>
         <source>PGN Format (*.pgn);;All Files (*.*)</source>
         <translation>PGN 格式 (*.pgn);;所有文件 (*.*)</translation>
     </message>
@@ -1562,8 +1562,8 @@
     </message>
     <message>
         <location filename="../projects/gui/src/mainwindow.cpp" line="1158"/>
-        <source>CChess GUI - Sylvan %1</source>
-        <translation>中国象棋界面程序——森罗万象 %1</translation>
+        <source>Xiangqi GUI - Sylvan %1</source>
+        <translation>中国象棋界面程序—森罗万象%1</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/mainwindow.cpp" line="1160"/>
@@ -1576,19 +1576,19 @@
         <translation>版权所有 2019 </translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/mainwindow.cpp" line="1191"/>
+        <location filename="../projects/gui/src/mainwindow.cpp" line="1190"/>
         <source>Save game</source>
         <translation>保存游戏</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/mainwindow.cpp" line="1275"/>
+        <location filename="../projects/gui/src/mainwindow.cpp" line="1274"/>
         <source>Game changed.
 Do you want to save?</source>
         <translation>游戏改变了。
 要保存吗？</translation>
     </message>
     <message>
-        <location filename="../projects/gui/src/mainwindow.cpp" line="1308"/>
+        <location filename="../projects/gui/src/mainwindow.cpp" line="1307"/>
         <source>User decision</source>
         <translation>用户决定</translation>
     </message>
@@ -1749,6 +1749,13 @@ Do you want to save?</source>
     </message>
 </context>
 <context>
+    <name>PgnGame</name>
+    <message>
+        <source>, </source>
+        <translation type="vanished">，</translation>
+    </message>
+</context>
+<context>
     <name>PgnGameEntryModel</name>
     <message>
         <location filename="../projects/gui/src/pgngameentrymodel.cpp" line="169"/>
@@ -1852,7 +1859,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="105"/>
         <source>%1 Red side admit defeat</source>
-        <translation>%1 红方认输</translation>
+        <translation>%1红方认输</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="109"/>
@@ -1862,7 +1869,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="111"/>
         <source>%1 Timeout defeat</source>
-        <translation>%1 超时判输</translation>
+        <translation>%1超时判输</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="116"/>
@@ -1872,12 +1879,12 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="118"/>
         <source>%1 Manual win</source>
-        <translation>%1 手动胜利</translation>
+        <translation>%1手动胜利</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="121"/>
         <source>%1 Output illegal moves</source>
-        <translation>%1 输出非法棋步</translation>
+        <translation>%1输出非法棋步</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="125"/>
@@ -1887,7 +1894,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="127"/>
         <source>%1 Disconnect</source>
-        <translation>%1 断线</translation>
+        <translation>%1断线</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="132"/>
@@ -1897,7 +1904,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="134"/>
         <source>%1&apos;s Disconnect</source>
-        <translation>%1&apos;s 断线</translation>
+        <translation>%1方断线</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="139"/>
@@ -1907,7 +1914,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="141"/>
         <source>%1 Rules win</source>
-        <translation>%1 规则胜利</translation>
+        <translation>%1规则胜利</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="144"/>
@@ -1940,6 +1947,11 @@ Do you want to save?</source>
         <location filename="../projects/lib/src/board/result.cpp" line="153"/>
         <source>Draw</source>
         <translation>和棋</translation>
+    </message>
+    <message>
+        <location filename="../projects/lib/src/board/result.cpp" line="158"/>
+        <source>: </source>
+        <translation>：</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/result.cpp" line="170"/>
@@ -2122,7 +2134,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/gui/src/threadedtask.cpp" line="31"/>
         <source>%1 - Undefined time remaining</source>
-        <translation>%1 - 未定义的剩余时间</translation>
+        <translation>%1—未定义的剩余时间</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/threadedtask.cpp" line="32"/>
@@ -2132,27 +2144,27 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/gui/src/threadedtask.cpp" line="90"/>
         <source>About 5 seconds</source>
-        <translation>大约 5 秒钟</translation>
+        <translation>大约5秒钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/threadedtask.cpp" line="93"/>
         <source>About 10 seconds</source>
-        <translation>大约 10 秒钟</translation>
+        <translation>大约10秒钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/threadedtask.cpp" line="96"/>
         <source>Less than a minute</source>
-        <translation>不到 1 分钟</translation>
+        <translation>不到1分钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/threadedtask.cpp" line="99"/>
         <source>About a minute</source>
-        <translation>大约 1 分钟</translation>
+        <translation>大约1分钟</translation>
     </message>
     <message>
         <location filename="../projects/gui/src/threadedtask.cpp" line="101"/>
         <source>About %1 minutes</source>
-        <translation>大约 %1 分钟</translation>
+        <translation>大约%1分钟</translation>
     </message>
 </context>
 <context>
@@ -2160,27 +2172,27 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="30"/>
         <source>%1 sec</source>
-        <translation>%1 秒钟</translation>
+        <translation>%1秒钟</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="32"/>
         <source>%1 min</source>
-        <translation>%1 分钟</translation>
+        <translation>%1分钟</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="33"/>
         <source>%1 h</source>
-        <translation>%1 小时</translation>
+        <translation>%1小时</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="41"/>
         <source>%1 k</source>
-        <translation>%1 千</translation>
+        <translation>%1千</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="42"/>
         <source>%1 M</source>
-        <translation>%1 百万</translation>
+        <translation>%1百万</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="175"/>
@@ -2190,32 +2202,32 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="177"/>
         <source>%1 per move</source>
-        <translation>%1 每步</translation>
+        <translation>%1每步</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="180"/>
         <source>%1 moves in %2</source>
-        <translation>%1 棋步在 %2</translation>
+        <translation>%1棋步在%2</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="187"/>
         <source>, %1 increment</source>
-        <translation>, %1 增加</translation>
+        <translation>，%1增加</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="190"/>
         <source>, %1 nodes</source>
-        <translation>, %1 节点数</translation>
+        <translation>，%1节点数</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="193"/>
         <source>, %1 plies</source>
-        <translation>, %1 步数</translation>
+        <translation>，%1步数</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/timecontrol.cpp" line="195"/>
         <source>, %1 ms margin</source>
-        <translation>, %1 毫秒 余裕</translation>
+        <translation>，%1毫秒冗余</translation>
     </message>
 </context>
 <context>
@@ -2354,7 +2366,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/gui/ui/timecontroldlg.ui" line="239"/>
         <source>Diff:</source>
-        <translation>微分：</translation>
+        <translation>差分：</translation>
     </message>
 </context>
 <context>
@@ -2362,7 +2374,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/tournament.cpp" line="754"/>
         <source>Elo difference: %1 +/- %2, LOS: %3 %, draw ratio: %4 %</source>
-        <translation>等级分差异：%1 +/- %2, 优越率: %3 %, 和棋率: %4 %</translation>
+        <translation>等级分差异：%1胜/负%2，优越率：%3 %，和棋率：%4 %</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/tournament.cpp" line="785"/>
@@ -2382,7 +2394,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/tournament.cpp" line="788"/>
         <source>+/-</source>
-        <translation>胜负</translation>
+        <translation>胜/负</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/tournament.cpp" line="789"/>
@@ -2402,17 +2414,17 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/tournament.cpp" line="812"/>
         <source>SPRT: llr %1 (%2%), lbound %3, ubound %4</source>
-        <translation>顺序概率比测试：对数似然比%1（%2%），下限 %3，上%4</translation>
+        <translation>顺序概率比测试：对数似然比%1（%2%），下限%3，上限%4</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/tournament.cpp" line="818"/>
         <source> - H0 was accepted</source>
-        <translation> - 接受无效假设H0</translation>
+        <translation> — 接受无效假设H0</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/tournament.cpp" line="820"/>
         <source> - H1 was accepted</source>
-        <translation> - 接受替代假设H1</translation>
+        <translation> — 接受替代假设H1</translation>
     </message>
 </context>
 <context>
@@ -2426,7 +2438,7 @@ Do you want to save?</source>
         <location filename="../projects/gui/src/tournamentresultsdlg.cpp" line="77"/>
         <source>Score of %1 vs %2: %3 - %4 - %5 [%6]
 </source>
-        <translation>分数 %1 vs %2: %3 - %4 - %5 [%6]
+        <translation>分数%1对%2：%3 — %4 — %5 [%6]
 </translation>
     </message>
     <message>
@@ -2436,7 +2448,7 @@ Do you want to save?</source>
 %1 of %2 games finished.</source>
         <translation>
 
-%1 of %2 游戏已完成.</translation>
+%1在%2游戏已完成。</translation>
     </message>
 </context>
 <context>
@@ -2623,7 +2635,7 @@ Do you want to save?</source>
     <message>
         <location filename="../projects/lib/src/board/westernboard.cpp" line="812"/>
         <source>%1 Win!</source>
-        <translation>%1 胜!</translation>
+        <translation>%1胜！</translation>
     </message>
     <message>
         <location filename="../projects/lib/src/board/westernboard.cpp" line="842"/>

@@ -21,8 +21,8 @@
 #include "uciengine.h"
 #include "ucciengine.h"
 
-REGISTER_ENGINE_CLASS(UciEngine, "uci")
-REGISTER_ENGINE_CLASS(UcciEngine, "ucci")
+REGISTER_ENGINE_CLASS(UciEngine, "UCI")
+REGISTER_ENGINE_CLASS(UcciEngine, "UCCI")
 
 ClassRegistry<ChessEngine>* EngineFactory::registry()
 {

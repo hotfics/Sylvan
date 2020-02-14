@@ -688,13 +688,14 @@ int main(int argc, char* argv[])
 	{
 		if (arg == "-v" || arg == "--version" || arg == "-version")
 		{
-            out << "sylvan-cli " << SYLVAN_CLI_VERSION << endl;
-			out << "Using Qt version " << qVersion() << endl << endl;
+            out << "Sylvan-CLI " << SYLVAN_CLI_VERSION << endl;
+            out << "Using Qt version " << qVersion() << endl << endl;
 			out << "Copyright (C) 2008-2018 Ilari Pihlajisto and Arto Jonsson" << endl;
+            out << "Copyright (C) 2019-2020 Wilbert Lee" << endl;
 			out << "This is free software; see the source for copying ";
 			out << "conditions.  There is NO" << endl << "warranty; not even for ";
 			out << "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.";
-			out << endl << endl;
+            out << endl;
 
 			return 0;
 		}

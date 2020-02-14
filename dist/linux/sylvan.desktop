@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Sylvan
-Comment=Interface for playing Chinese Chess
-GenericName=CChess Game
+Comment=Interface for playing Xiangqi
+GenericName=Xiangqi Game
 Icon=sylvan
 Exec=sylvan
 Terminal=false

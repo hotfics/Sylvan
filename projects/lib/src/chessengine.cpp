@@ -17,11 +17,12 @@
     along with Sylvan.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "chessengine.h"
 #include <QIODevice>
 #include <QTimer>
 #include <QStringRef>
 #include <QtAlgorithms>
+
+#include "chessengine.h"
 #include "engineoption.h"
 
 int ChessEngine::s_count = 0;

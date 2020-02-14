@@ -144,6 +144,8 @@ void UcciEngine::startGame()
 
     write("newgame");
 
+    sendOption("usemillisec", false);
+
     if (m_canPonder)
         sendOption("ponder", pondering());
 
@@ -265,7 +267,9 @@ void UcciEngine::startThinking()
             command += " infinite";
     }
     else if (myTc->timePerMove() > 0)
-        command += QString(" time %1").arg(myTc->timeLeft());
+    {
+        command += QString(" time %1").arg(myTc->timeLeft() / 1000);
+    }
     else
     {
         command += QString(" wtime %1").arg(redTc->timeLeft());
@@ -411,8 +415,6 @@ void UcciEngine::parseInfo(const QVarLengthArray<QStringRef>& tokens,
     case InfoScore:
     {
         int score = 0;
-        //for (int i = 1; i < tokens.size(); i++)
-        //{
         int i = 1;
         if (tokens[i - 1] == "cp")
             score = tokens[i].toString().toInt();
@@ -430,8 +432,6 @@ void UcciEngine::parseInfo(const QVarLengthArray<QStringRef>& tokens,
         else {
             score = tokens[i-1].toString().toInt();
         }
-        //i++;
-        //}
         if (redEvalPov() && side() == Chess::Side::Black)
             score = -score;
         eval->setScore(score);
@@ -712,7 +712,7 @@ void UcciEngine::parseLine(const QString& line)
             addVariantsFromOption(option);
         else if (option->name() == "UCCI_Opponent")
             m_sendOpponentsName = true;
-        else if (option->name() == "Ponder")
+        else if (option->name() == "ponder")
             m_canPonder = true;
         else if (option->name().startsWith("UCCI_") &&
                  option->name() != "UCCI_LimitStrength" &&

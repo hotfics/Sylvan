@@ -41,7 +41,7 @@ MoveList::MoveList(QWidget* parent)
     m_moveList->setUndoRedoEnabled(false);
     m_moveList->document()->setDefaultStyleSheet(
                 "a:link { text-decoration: none; } "
-                ".move { color: black;  } "
+                ".move { color: black; } "
                 ".comment { color: green; }");
 
 #ifdef Q_OS_WIN32
