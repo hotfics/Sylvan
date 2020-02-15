@@ -87,6 +87,7 @@ UcciEngine::UcciEngine(QObject* parent)
       m_useDirectPv(false),
       m_sendOpponentsName(false),
       m_canPonder(false),
+      m_useMillisec(false),
       m_ponderState(NotPondering),
       m_movesPondered(0),
       m_ponderHits(0),
@@ -143,8 +144,6 @@ void UcciEngine::startGame()
     setVariant(board()->variant());
 
     write("newgame");
-
-    sendOption("usemillisec", false);
 
     if (m_canPonder)
         sendOption("ponder", pondering());
@@ -268,7 +267,10 @@ void UcciEngine::startThinking()
     }
     else if (myTc->timePerMove() > 0)
     {
-        command += QString(" time %1").arg(myTc->timeLeft() / 1000);
+        int time = myTc->timeLeft();
+        if (!m_useMillisec)
+            time /= 1000;
+        command += QString(" time %1").arg(time);
     }
     else
     {
@@ -714,6 +716,8 @@ void UcciEngine::parseLine(const QString& line)
             m_sendOpponentsName = true;
         else if (option->name() == "ponder")
             m_canPonder = true;
+        else if (option->name() == "usemillisec")
+            m_useMillisec = option->value().toBool();
         else if (option->name().startsWith("UCCI_") &&
                  option->name() != "UCCI_LimitStrength" &&
                  option->name() != "UCCI_Elo")

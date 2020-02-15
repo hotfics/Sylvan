@@ -89,6 +89,7 @@ private:
     QStringList m_bmBuffer;
     bool m_sendOpponentsName;
     bool m_canPonder;
+    bool m_useMillisec;
     PonderState m_ponderState;
     Chess::Move m_ponderMove;
     QString m_ponderMoveSan;
